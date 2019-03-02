@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+/home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2491356584.index
+/firstWebApp/src
+/home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4149765574.index
+/firstwebapp/src
+/home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1133759385.index
+/HelloServlet/src
