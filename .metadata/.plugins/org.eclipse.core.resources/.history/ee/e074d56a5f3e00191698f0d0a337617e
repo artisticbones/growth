@@ -44,7 +44,7 @@ public class HelloServlet implements Servlet{
 		while(names.hasMoreElements()) {
 			String name = names.nextElement();
 			String value = config.getInitParameter(name);
-			System.out.println("^^" + name + ":" + value );
+			System.out.println("^^" + name + "name:" + value );
 		}
 	}
 

@@ -38,13 +38,11 @@ public class HelloServlet implements Servlet{
 		System.out.println("Init...");
 		
 		String user = config.getInitParameter("user");
-		System.out.println("user:" + user);
+		System.out.println(user);
 		
 		Enumeration<String> names = config.getInitParameterNames();
 		while(names.hasMoreElements()) {
-			String name = names.nextElement();
-			String value = config.getInitParameter(name);
-			System.out.println("^^" + name + ":" + value );
+			System.out.println(names);
 		}
 	}
 

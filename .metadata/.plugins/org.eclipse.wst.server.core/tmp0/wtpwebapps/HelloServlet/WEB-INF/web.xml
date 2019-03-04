@@ -11,6 +11,21 @@
 		<servlet-name>helloServlet</servlet-name>
 		<!--Servlet的全类名-->
 		<servlet-class>hello.HelloServlet</servlet-class>
+		<!--初始化servlet的初始化参数-->
+		<init-param>
+			<!--参数名-->
+			<param-name>user</param-name>
+			<!--参数值-->
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<!--参数名-->
+			<param-name>password</param-name>
+			<!--参数值-->
+			<param-value>hello</param-value>
+		</init-param>
+		<!--指定被创建的时机-->
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	
 	<servlet-mapping>

@@ -1,7 +1,6 @@
 package hello;
 
 import java.io.IOException;
-import java.util.Enumeration;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -36,16 +35,6 @@ public class HelloServlet implements Servlet{
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 		System.out.println("Init...");
-		
-		String user = config.getInitParameter("user");
-		System.out.println("user:" + user);
-		
-		Enumeration<String> names = config.getInitParameterNames();
-		while(names.hasMoreElements()) {
-			String name = names.nextElement();
-			String value = config.getInitParameter(name);
-			System.out.println("^^" + name + ":" + value );
-		}
 	}
 
 	@Override
