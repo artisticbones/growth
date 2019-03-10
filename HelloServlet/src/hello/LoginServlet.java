@@ -1,6 +1,7 @@
 package hello;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Map;
 
@@ -9,6 +10,10 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+
 
 public class LoginServlet implements Servlet{
 
@@ -56,10 +61,28 @@ public class LoginServlet implements Servlet{
 		Enumeration<String> names = req.getParameterNames(); 
 		while(names.hasMoreElements()) {
 			String name = names.nextElement();
-			Map<String, String[]> value = req.getParameterMap();
+			String value = req.getParameter(name);
 			
-			System.out.println(name + "," + value);
+			System.out.println("^^" + name + "," + value);
 		}
+		
+		Map<String, String[]> map = req.getParameterMap();
+		for(Map.Entry<String, String[]> entry:map.entrySet()) {
+			System.out.println("**" + entry.getKey() + ":" + Arrays.asList(entry.getValue()));
+		}
+		
+		HttpServletRequest httpservlet = (HttpServletRequest) req; 
+		String URI = httpservlet.getRequestURI();
+		System.out.println(URI);
+		
+		String query = httpservlet.getQueryString();
+		System.out.println(query);
+		
+		String method = httpservlet.getMethod();
+		System.out.println(method);
+		
+		String servletPath = httpservlet.getServletPath();
+		System.out.println(servletPath);
 	}
-
+	
 }
