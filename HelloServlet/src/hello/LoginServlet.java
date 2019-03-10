@@ -1,6 +1,7 @@
 package hello;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Map;
@@ -10,8 +11,9 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServlet;
+//import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+
 
 
 
@@ -83,6 +85,9 @@ public class LoginServlet implements Servlet{
 		
 		String servletPath = httpservlet.getServletPath();
 		System.out.println(servletPath);
+		
+		PrintWriter out = res.getWriter();
+		out.print("helloworld!");
 	}
 	
 }
