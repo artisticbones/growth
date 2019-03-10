@@ -10,7 +10,7 @@
 <body>
 	<%
 		Person person = new Person();
-		System.out.println(person.getpersonInfo());
+		out.println(person.getpersonInfo());
 	%>
 </body>
 </html>
