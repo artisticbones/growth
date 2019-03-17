@@ -21,12 +21,12 @@
 	</context-param>
 
 	<servlet>
-		<servlet-name>login</servlet-name>
-		<servlet-class>cn.edu.swu.login</servlet-class>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>cn.swu.edu.LoginServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>login</servlet-name>
-		<url-pattern>/LoginServlet</url-pattern>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/loginServlet</url-pattern>
 	</servlet-mapping>	
 </web-app>

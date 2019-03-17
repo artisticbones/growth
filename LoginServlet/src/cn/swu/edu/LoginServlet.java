@@ -12,7 +12,7 @@ import javax.servlet.ServletResponse;
 
 public class LoginServlet implements Servlet {
 
-		private ServletConfig servletConfig;
+	private ServletConfig servletConfig;
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
@@ -49,9 +49,9 @@ public class LoginServlet implements Servlet {
 		
 		PrintWriter out = response.getWriter();
 		if(inituser.equals(username) && initpassword.equals(password)) {
-			out.print(username + "you have log in nitian.online!");
+			out.print(username + " you have log in nitian.online!");
 		}else {
-			out.print(username + "login failed!");
+			out.print(username + " login failed!");
 		}
 	}
 
