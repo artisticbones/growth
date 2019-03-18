@@ -4,17 +4,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-public class LoginServlet extends MyGenericServlet {
+public class LoginServlet2 extends MyHttpServlet {
 
-	public void init() throws ServletException {
-		System.out.println("初始化");
-	}
-	@Override
-	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		String method = request.getMethod();
+		System.out.println(method);
 		String inituser = getServletContext().getInitParameter("user");
 		String initpassword = getServletContext().getInitParameter("password");
 		
