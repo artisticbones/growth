@@ -2,10 +2,9 @@
 title: "My JavaWeb Growth"
 ---
 
----
 ### Project Name
 #### Pending
----
+
 ---
 ### Introducation
 
@@ -26,7 +25,8 @@ title: "My JavaWeb Growth"
 #### Day 14
 Learn how to use markdown,before today,I`ve been submitting the code 10 times.  But I haven`t deployed locally written code to tomcat,the conversion between this is a bit of a hassle.I will learn how to use ant and use to war these code,so they will be in aliyun.
 #### Day 15
-
-#### Day 16
+Nowaday,I have deployed the code on aliyun,and adjust the codes in order to they can work on server.
 #### Day 17
+Accord the video to learn the httpservlet and genericservlet,and try to write the sample code on the video.
 #### Day 18
+Code my own Httpservlet and Genericservlet according to the video tutorial,in the process of writing not a video tutorial I have read more or less three times,it feels more and more difficult.
