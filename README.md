@@ -33,3 +33,5 @@ Nowaday,I have deployed the code on aliyun,and adjust the codes in order to they
 Accord the video to learn the httpservlet and genericservlet,and try to write the sample code on the video.
 #### Day 18
 Code my own Httpservlet and Genericservlet according to the video tutorial,in the process of writing not a video tutorial I have read more or less three times,it feels more and more difficult.
+#### Day 19
+Today,I learned how to connect a servlet programm to a database and encountered a permissions issue.Locally,the user is an ordinary user,but MySQL is possessed by the root user,and I haven't solved the problem yet. 

@@ -22,7 +22,7 @@
 
 	<servlet>
 		<servlet-name>loginServlet</servlet-name>
-		<servlet-class>cn.swu.edu.LoginServlet</servlet-class>
+		<servlet-class>cn.swu.edu.LoginServlet3</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
