@@ -24,7 +24,7 @@ title: "My JavaWeb Growth"
 
 --- __*[Aliyun](http://120.79.133.21:8080/LoginServlet/Login.html)*__
 
---- __*[MyBlog](http://119.23.107.137)*__ : I hope you can pay attention to my blog and correct my mistakes!
+--- __*[MyBlog](http://119.23.107.137)*__ : I hope you can pay attention to my blog and correct my mistakes that I do not realized!
 ### The things I do
 ---
 #### Day 14
@@ -36,4 +36,6 @@ Accord the video to learn the httpservlet and genericservlet,and try to write th
 #### Day 18
 Code my own Httpservlet and Genericservlet according to the video tutorial,in the process of writing not a video tutorial I have read more or less three times,it feels more and more difficult.
 #### Day 19
-Today,I learned how to connect a servlet programm to a database and encountered a permissions issue.Locally,the user is an ordinary user,but MySQL is possessed by the root user,and I haven't solved the problem yet. 
+Today,I learned how to connect a servlet programm to a database and encountered a permissions issue.Locally,the user is an ordinary user,but MySQL is possessed by the root user,and I haven't solved the problem yet.
+#### Day 21
+Today,I have learned the principle of the JSP file,it is essentially a servlet program,in the execution of the JSP engine to compile it into a servlet program. 
