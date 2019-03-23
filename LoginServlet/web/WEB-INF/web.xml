@@ -28,5 +28,23 @@
 	<servlet-mapping>
 		<servlet-name>loginServlet</servlet-name>
 		<url-pattern>/loginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>helloJSP</servlet-name>
+		<jsp-file>/hello.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>helloJSP</servlet-name>
+		<url-pattern>/hello.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>helloJSP2</servlet-name>
+		<servlet-class>cn.swu.edu.HelloJSP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>helloJSP2</servlet-name>
+		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>	
 </web-app>

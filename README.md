@@ -38,4 +38,8 @@ Code my own Httpservlet and Genericservlet according to the video tutorial,in th
 #### Day 19
 Today,I learned how to connect a servlet programm to a database and encountered a permissions issue.Locally,the user is an ordinary user,but MySQL is possessed by the root user,and I haven't solved the problem yet.
 #### Day 21
-Today,I have learned the principle of the JSP file,it is essentially a servlet program,in the execution of the JSP engine to compile it into a servlet program. 
+Today,I have learned the principle of the JSP file,it is essentially a servlet program,in the execution of the JSP engine to compile it into a servlet program.
+#### Day 23
+As of today,I have looked at a large part of the JSP and expect to be able to finish it learning tomorrow.Today,I realized the login successfully display pop-up window,but JSP script writing I am not quite clear,there is a diffculty has not been resovled,look forward to tomorrow can be resolved.
+Tips:
+user:tomcat pass:tomcat 
