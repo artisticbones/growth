@@ -46,5 +46,41 @@
 	<servlet-mapping>
 		<servlet-name>helloJSP2</servlet-name>
 		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>helloJSP3</servlet-name>
+		<servlet-class>cn.swu.edu.TestAttr</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>helloJSP3</servlet-name>
+		<url-pattern>/testAttr</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ForwardServlet</servlet-name>
+		<servlet-class>cn.swu.edu.ForwardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ForwardServlet</servlet-name>
+		<url-pattern>/forwardServlet</url-pattern>
 	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>TestServlet</servlet-name>
+		<servlet-class>cn.swu.edu.TestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/testServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RedirectServlet</servlet-name>
+		<servlet-class>cn.swu.edu.RedirectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RedirectServlet</servlet-name>
+		<url-pattern>/redirectServlet</url-pattern>
+	</servlet-mapping>
 </web-app>

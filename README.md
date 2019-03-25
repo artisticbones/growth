@@ -42,4 +42,9 @@ Today,I have learned the principle of the JSP file,it is essentially a servlet p
 #### Day 23
 As of today,I have looked at a large part of the JSP and expect to be able to finish it learning tomorrow.Today,I realized the login successfully display pop-up window,but JSP script writing I am not quite clear,there is a diffculty has not been resovled,look forward to tomorrow can be resolved.
 Tips:
-user:tomcat pass:tomcat 
+user:tomcat pass:tomcat
+#### Day 24
+I haven't finished the code,as it is the focus,so I have to look at the tutorial carefully.I've uploaded some code,but I didn't update the README.md.
+#### Day 25 
+I finished the JSP tutorial.It it more important for the behind content,so it took me twice times to look at tutorials and write code.
+All the home site is http://120.79.133.21:8080/LoginServlet/*.jsp
