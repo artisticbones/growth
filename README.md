@@ -48,3 +48,5 @@ I haven't finished the code,as it is the focus,so I have to look at the tutorial
 #### Day 25 
 I finished the JSP tutorial.It it more important for the behind content,so it took me twice times to look at tutorials and write code.
 All the home site is http://120.79.133.21:8080/LoginServlet/*.jsp
+#### Day 26
+Now,I have learned JavaWEB_include directive.These chapters are relatively simple,but in order to learn these chapters I have recreated a project that I will deploy to Aliyun.
