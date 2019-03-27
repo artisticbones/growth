@@ -47,13 +47,13 @@ user:tomcat pass:tomcat
 I haven't finished the code,as it is the focus,so I have to look at the tutorial carefully.I've uploaded some code,but I didn't update the README.md.
 #### Day 25 
 I finished the JSP tutorial.It it more important for the behind content,so it took me twice times to look at tutorials and write code.
-All the home site is http://120.79.133.21:8080/LoginServlet/*.jsp
+* All the home site is http://120.79.133.21:8080/LoginServlet/*.jsp
 #### Day 26
 Now,I have learned JavaWEB_include directive.These chapters are relatively simple,but in order to learn these chapters I have recreated a project that I will deploy to Aliyun.
 #### Day 27
 The task I finished today was to complete the JSP tutorials.Now I'm summing up a few inportant conclusions:
-First,the forwarding of the request is based on request,the method is request.getRequestDispatcher(path).forward(request,response);
-Second,the redirection of the request is based on response,the method is response.sendRedirect(path);
-Third,the scope of the four elements of pageContext,request,session,application is small to large and important and they can call methods related to the getAttribute method.These methods all belong to Object objects.
-Forth,There are instructions that can be placed at the first of the JSP to configure the JSP page.Similarly,there are some JSP tags that can be configured with JSP pages.
-The end,all the home site is http://120.79.133.21:8080/web/*.jsp
+* First,the forwarding of the request is based on request,the method is request.getRequestDispatcher(path).forward(request,response);
+* Second,the redirection of the request is based on response,the method is response.sendRedirect(path);
+* Third,the scope of the four elements of pageContext,request,session,application is small to large and important and they can call methods related to the getAttribute method.These methods all belong to Object objects.
+* Forth,There are instructions that can be placed at the first of the JSP to configure the JSP page.Similarly,there are some JSP tags that can be configured with JSP pages.
+* The end,all the home site is http://120.79.133.21:8080/web/*.jsp
