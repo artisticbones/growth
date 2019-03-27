@@ -12,6 +12,9 @@
 	<%=  str %> <!-- 前提是使用了include标签 -->
 	--%>
 	
-	<%= request.getParameter("username") %>
+	<%
+		String name = request.getParameter("username");
+		out.println(name);
+	%>
 </body>
 </html>

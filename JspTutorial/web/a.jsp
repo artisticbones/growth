@@ -14,7 +14,12 @@
 		DateFormat dateFormat = null;
 		
 		HttpServletRequest req = null;
-		int i = 10 / 0;
+		//int i = 10 / 0;
 	%>
+	
+	<form action="hello.jsp" method="get">
+		username: <input type="text" name="username">
+		<input type="submit" value="submit">
+	</form>
 </body>
 </html>

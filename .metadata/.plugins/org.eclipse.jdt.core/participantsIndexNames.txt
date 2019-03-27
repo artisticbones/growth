@@ -3,6 +3,8 @@ INDEX VERSION 1.131
 /JspTutorial/src
 /home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1133759385.index
 /HelloServlet/src
+/home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2782919173.index
+/JspTutorial/src
 /home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4149765574.index
 /firstwebapp/src
 /home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2003680926.index

@@ -1,7 +1,7 @@
 package cn.swu.edu;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,18 +26,19 @@ public class HelloJSP extends HttpServlet {
 		String user = request.getParameter("username");
 		String pass = request.getParameter("password");
 		
-		PrintWriter out = response.getWriter();
+		//PrintWriter out = response.getWriter();
 		HttpSession session=request.getSession();
 		if(user.equals("tomcat") && pass.equals("tomcat")){
 			session.setAttribute("success", "登陆成功");
-			String strAge = request.getParameter("age");
-			Integer age = Integer.parseInt(strAge);
-			if(age >= 18){
+			/*String strAge = request.getParameter("age");
+			Integer age = Integer.parseInt(strAge);*/
+			/*if(age >= 18){
 				out.println(user + "," + "You're an adult...");	
 			}else{
 				out.println(user + "," + "You're underage...");
-			}
-			response.sendRedirect(request.getContextPath()+"/count.jsp");
+			}*/
+			request.getRequestDispatcher("/count.jsp").forward(request, response);
+			//response.sendRedirect(request.getContextPath()+"/count.jsp");
 			
 		}else {
 			request.setAttribute("message", "LoginFailed");

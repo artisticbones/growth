@@ -16,6 +16,13 @@
 		</script>
 	<%
 			String user = request.getParameter("username");
+			String strAge = request.getParameter("age");
+			Integer age = Integer.parseInt(strAge);
+			if(age >= 18){
+				out.println(user + "," + "You're an adult...");	
+			}else{
+				out.println(user + "," + "You're underage...");
+			}
 		} 
 	%>
 </body>
