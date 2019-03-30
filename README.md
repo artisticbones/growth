@@ -59,4 +59,4 @@ The task I finished today was to complete the JSP tutorials.Now I'm summing up a
 * The end,all the home site is http://120.79.133.21:8080/web/*.jsp
 #### Day 30
 I started to learn MVC tutorial,It is a design pattern we're going to follow when we design.Unlike the previous one,the code for this linked database does not need to do anything else,just control.
-* New site is http://120.79.133.21/MVCTutorial/test.jsp
+* New site is http://120.79.133.21:8080/MVCTutorial/test.jsp
