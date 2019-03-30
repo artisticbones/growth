@@ -57,3 +57,6 @@ The task I finished today was to complete the JSP tutorials.Now I'm summing up a
 * Third,the scope of the four elements of pageContext,request,session,application is small to large and important and they can call methods related to the getAttribute method.These methods all belong to Object objects.
 * Forth,There are instructions that can be placed at the first of the JSP to configure the JSP page.Similarly,there are some JSP tags that can be configured with JSP pages.
 * The end,all the home site is http://120.79.133.21:8080/web/*.jsp
+#### Day 30
+I started to learn MVC tutorial,It is a design pattern we're going to follow when we design.Unlike the previous one,the code for this linked database does not need to do anything else,just control.
+* New site is http://120.79.133.21/
