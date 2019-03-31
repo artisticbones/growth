@@ -27,6 +27,7 @@ title: "My JavaWeb Growth"
 --- __*[MyBlog](http://119.23.107.137)*__ : I hope you can pay attention to my blog and correct my mistakes that I do not realized!
 ### The things I do
 ---
+### March
 #### Day 14
 Learn how to use markdown,before today,I`ve been submitting the code 10 times.  But I haven`t deployed locally written code to tomcat,the conversion between this is a bit of a hassle.I will learn how to use ant and use to war these code,so they will be in aliyun.
 #### Day 15
@@ -60,3 +61,5 @@ The task I finished today was to complete the JSP tutorials.Now I'm summing up a
 #### Day 30
 I started to learn MVC tutorial,It is a design pattern we're going to follow when we design.Unlike the previous one,the code for this linked database does not need to do anything else,just control.
 * New site is http://120.79.133.21:8080/MVCTutorial/test.jsp
+#### Day 31
+On the basis of the last time I added the delete function,is still the use of MVC mode,but there is a problem ,success.jsp can not be automatically forwarded.I am trying to solve this problem.

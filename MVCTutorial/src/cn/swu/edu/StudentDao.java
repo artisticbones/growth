@@ -9,6 +9,50 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentDao {
+	
+	public void deleteByFlowId(Integer flowId) {
+		//List<Student> students = new ArrayList<Student>();
+		
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		try {
+			String driverClass = "com.mysql.jdbc.Driver";
+			String url = "jdbc:mysql:///test";
+			String user = "root";
+			String password = "happy1314!";
+			
+			Class.forName(driverClass);
+			connection = DriverManager.getConnection(url,user,password);
+			
+			String sql = "delete from examstudent where flow_id = ?";
+			preparedStatement = connection.prepareStatement(sql);
+			
+			preparedStatement.setInt(1,flowId);
+			
+			preparedStatement.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			try {
+				if(connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				if(preparedStatement != null) {
+					preparedStatement.close();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public List<Student> getAll() {
 		List<Student> students = new ArrayList<Student>();
 		

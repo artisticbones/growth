@@ -14,7 +14,7 @@
 		List<Student> stus = (List<Student>)request.getAttribute("students");
 	%>
 	
-	<table>
+	<table border="1">
 		
 		<tr>
 			<th>FlowId</th>
@@ -24,6 +24,7 @@
 			<th>StudentName</th>
 			<th>Location</th>
 			<th>Grade</th>
+			<th>Delete</th>
 		</tr>
 		
 		<%
@@ -38,6 +39,7 @@
 			<td><%= student.getStudentName() %></td>
 			<td><%= student.getLocation() %></td>
 			<td><%= student.getGrade() %></td>
+			<td><a href="deleteStudent?flowId=<%= student.getFlowId()%>">delete</a></td>
 		</tr>
 		
 		<%		

@@ -5,11 +5,20 @@
 		Tomcat Documentation.
 	</description>
   <servlet>
-  	<servlet-name>listAllStudent</servlet-name>
-  	<servlet-class>cn.swu.edu.ListAllStudents</servlet-class>
+    <servlet-name>listAllStudent</servlet-name>
+    <servlet-class>cn.swu.edu.ListAllStudents</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>listAllStudent</servlet-name>
-  	<url-pattern>/listAllStudents</url-pattern>
+    <servlet-name>listAllStudent</servlet-name>
+    <url-pattern>/listAllStudents</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DeleteStudentServlet</servlet-name>
+  	<servlet-class>cn.swu.edu.DeleteStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteStudentServlet</servlet-name>
+  	<url-pattern>/deleteStudent</url-pattern>
   </servlet-mapping>
 </web-app>
