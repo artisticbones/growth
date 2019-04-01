@@ -10,6 +10,56 @@ import java.util.List;
 
 public class StudentDao {
 	
+	public void AddRecord(Integer flowId,int type,String idCard,String examCard,String studentName,String location,int grade) {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		try {
+			String driverClass = "com.mysql.jdbc.Driver";
+			String url = "jdbc:mysql:///test";
+			String user = "root";
+			String password = "happy1314!";
+			
+			Class.forName(driverClass);
+			connection = DriverManager.getConnection(url,user,password);
+			
+			String sql = "insert into examstudent(flow_id,Type,id_card,exam_card,student_name,Location,Grade)"
+					+ "values('"+flowId+"','"+type+"','"+idCard+"','"+examCard+"','"+studentName+"','"+location+"','"+grade+"')";
+			connection.createStatement().execute(sql);
+//			preparedStatement = connection.prepareStatement(sql);
+//			
+//			preparedStatement.setInt(1,flowId);
+//			preparedStatement.setInt(2, type);
+//			preparedStatement.setString(3, idCard);
+//			preparedStatement.setString(4, examCard);
+//			preparedStatement.setString(5, studentName);
+//			preparedStatement.setString(6, location);
+//			preparedStatement.setInt(7, grade);
+//			
+			//preparedStatement.executeUpdate();
+//			preparedStatement.execute();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			try {
+				if(connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				if(preparedStatement != null) {
+					preparedStatement.close();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public void deleteByFlowId(Integer flowId) {
 		//List<Student> students = new ArrayList<Student>();
 		

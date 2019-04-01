@@ -14,11 +14,20 @@
   </servlet-mapping>
   
   <servlet>
-  	<servlet-name>DeleteStudentServlet</servlet-name>
-  	<servlet-class>cn.swu.edu.DeleteStudentServlet</servlet-class>
+    <servlet-name>DeleteStudentServlet</servlet-name>
+    <servlet-class>cn.swu.edu.DeleteStudentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>DeleteStudentServlet</servlet-name>
-  	<url-pattern>/deleteStudent</url-pattern>
+    <servlet-name>DeleteStudentServlet</servlet-name>
+    <url-pattern>/deleteStudent</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AddStudentServlet</servlet-name>
+    <servlet-class>cn.swu.edu.AddRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddStudentServlet</servlet-name>
+    <url-pattern>/addRecord</url-pattern>
   </servlet-mapping>
 </web-app>

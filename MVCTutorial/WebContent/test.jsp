@@ -9,6 +9,7 @@
 <body>
 	
 	<a href="listAllStudents">List All Student</a>
-	
+	<br><br>
+	If you want to add record,please click<a href="addrecord.jsp">here</a>!
 </body>
 </html>

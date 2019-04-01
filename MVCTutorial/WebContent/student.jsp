@@ -47,6 +47,7 @@
 		%>
 		
 	</table>
+	if you want to add record,please click <a href="addrecord.jsp">here</a>
 	
 	
 </body>

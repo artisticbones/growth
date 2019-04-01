@@ -63,3 +63,7 @@ I started to learn MVC tutorial,It is a design pattern we're going to follow whe
 * New site is http://120.79.133.21:8080/MVCTutorial/test.jsp
 #### Day 31
 On the basis of the last time I added the delete function,is still the use of MVC mode,but there is a problem ,success.jsp can not be automatically forwarded.I am trying to solve this problem.
+
+### April
+#### Day 1
+Today I am learning the design anf implementation of DAO layer in the MVC design pattern.So far,I have only writtern the execuses and parent classes required by the DAO layer.The implementation has not yet been completed.This part needs to think more before going on.
