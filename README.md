@@ -69,8 +69,9 @@ On the basis of the last time I added the delete function,is still the use of MV
 Today I am learning the design anf implementation of DAO layer in the MVC design pattern.So far,I have only writtern the execuses and parent classes required by the DAO layer.The implementation has not yet been completed.This part needs to think more before going on.
 #### Day 3
 Yesterday and today I was thinking about how to implement the DAO layer.Unfortunately,I didn't realize it,so I followed the vedio tutorial.But there are too many questions here:
-First of all,how is reflact mapped?
-Secondly,I am not very clear about the structure of the DAO layer.
-Again,what is c3p0?
-Fourth,what is the working principle of JUnit?
+* First of all,how is reflact mapped?
+* Secondly,I am not very clear about the structure of the DAO layer.
+* Again,what is c3p0?
+* Fourth,what is the working principle of JUnit?
 Another problem that I solved is that the c3p0 data source will introduce the classnotfound error when it is imported into the jar package.The reason is to import two packages.The MVC design pattern is still no as simple as I thought,and I think a lot of the vedio tutorials are missing,I am trying to find some of them.
+There also have a problem,due to the JUnit,I can not deploy this code on Aliyun,because ant compilation error.
