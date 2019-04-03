@@ -29,7 +29,7 @@ title: "My JavaWeb Growth"
 ---
 ### March
 #### Day 14
-Learn how to use markdown,before today,I`ve been submitting the code 10 times.  But I haven`t deployed locally written code to tomcat,the conversion between this is a bit of a hassle.I will learn how to use ant and use to war these code,so they will be in aliyun.
+Learn how to use markdown,before today,I've been submitting the code 10 times.  But I haven't deployed locally written code to tomcat,the conversion between this is a bit of a hassle.I will learn how to use ant and use to war these code,so they will be in aliyun.
 #### Day 15
 Nowaday,I have deployed the code on aliyun,and adjust the codes in order to they can work on server.
 #### Day 17
@@ -73,5 +73,9 @@ Yesterday and today I was thinking about how to implement the DAO layer.Unfortun
 * Secondly,I am not very clear about the structure of the DAO layer.
 * Again,what is c3p0?
 * Fourth,what is the working principle of JUnit?
+
 Another problem that I solved is that the c3p0 data source will introduce the classnotfound error when it is imported into the jar package.The reason is to import two packages.The MVC design pattern is still no as simple as I thought,and I think a lot of the vedio tutorials are missing,I am trying to find some of them.
+
 There also have a problem,due to the JUnit,I can not deploy this code on Aliyun,because ant compilation error.
+
+Now I have settled the problem,but there lacks JSP files.
