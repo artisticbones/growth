@@ -1,6 +1,7 @@
 package cn.swu.edu.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -51,6 +52,7 @@ public class CustomerServlet extends HttpServlet {
 		String methodName = servletPath.substring(1);
 		methodName = methodName.substring(0,methodName.length()-7);
 		
+		PrintWriter out = resp.getWriter();	
 		//System.out.println(methodName);
 		try {
 			Method method = getClass().getDeclaredMethod(methodName ,HttpServletRequest.class , HttpServletResponse.class);
@@ -65,26 +67,36 @@ public class CustomerServlet extends HttpServlet {
 
 	private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();	
+		out.println("edit");
 		System.out.println("edit");
 	}
 	
 	private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();	
+		out.println("update");
 		System.out.println("update");
 	}
 
 	private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();	
+		out.println("delete");
 		System.out.println("delete");
 	}
 
 	private void query(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();	
+		out.println("query");
 		System.out.println("query");
 	}
 
 	private void addCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();	
+		out.println("addCustomer");
 		System.out.println("addCustomer");
 	}
 
