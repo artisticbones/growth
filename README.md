@@ -79,3 +79,7 @@ Another problem that I solved is that the c3p0 data source will introduce the cl
 There also have a problem,due to the JUnit,I can not deploy this code on Aliyun,because ant compilation error.
 
 Now I have settled the problem,but there lacks JSP files.
+#### Day 4
+I have finished the tutorial about one-to-many servlets.It used the method named reflact as mentioned yesterday.
+
+I searched the invoke method,which is inside the reflact package.It has at least two parameters.These parameters are Object objects.It is used for simplify the code and improve the reusability of the program. 

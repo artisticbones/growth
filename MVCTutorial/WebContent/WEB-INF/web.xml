@@ -12,7 +12,6 @@
     <servlet-name>listAllStudent</servlet-name>
     <url-pattern>/listAllStudents</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>DeleteStudentServlet</servlet-name>
     <servlet-class>cn.swu.edu.DeleteStudentServlet</servlet-class>
@@ -21,7 +20,6 @@
     <servlet-name>DeleteStudentServlet</servlet-name>
     <url-pattern>/deleteStudent</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>AddStudentServlet</servlet-name>
     <servlet-class>cn.swu.edu.AddRecordServlet</servlet-class>
@@ -29,5 +27,14 @@
   <servlet-mapping>
     <servlet-name>AddStudentServlet</servlet-name>
     <url-pattern>/addRecord</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CustomerServlet</servlet-name>
+    <servlet-class>cn.swu.edu.servlet.CustomerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerServlet</servlet-name>
+    <url-pattern>*.action</url-pattern>
   </servlet-mapping>
 </web-app>
