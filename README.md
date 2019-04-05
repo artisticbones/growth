@@ -85,3 +85,5 @@ I have finished the tutorial about one-to-many servlets.It used the method named
 I searched the invoke method,which is inside the reflact package.It has at least two parameters.These parameters are Object objects.It is used for simplify the code and improve the reusability of the program. 
 #### Day 5
 Trying to implement the fuzzy query function, has not been fully implemented, the temporary implementation of the query function, unlike the previous one is the code to optimize the structure, each function is dedicated to a function, more neat.
+
+If you want to access it,you can try http://120.79.133.21:8080/MVCTutorial/index.jsp
