@@ -83,3 +83,5 @@ Now I have settled the problem,but there lacks JSP files.
 I have finished the tutorial about one-to-many servlets.It used the method named reflact as mentioned yesterday.
 
 I searched the invoke method,which is inside the reflact package.It has at least two parameters.These parameters are Object objects.It is used for simplify the code and improve the reusability of the program. 
+#### Day 5
+Trying to implement the fuzzy query function, has not been fully implemented, the temporary implementation of the query function, unlike the previous one is the code to optimize the structure, each function is dedicated to a function, more neat.

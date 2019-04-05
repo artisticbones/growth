@@ -40,19 +40,20 @@
     <fullyQualifiedTypeName name="java.lang.reflect.ParameterizedType"/>
     <fullyQualifiedTypeName name="java.lang.Class"/>
     <fullyQualifiedTypeName name="cn.swu.edu.test.CustomerDAOJdbcImplTest"/>
-    <fullyQualifiedTypeName name="cn.swu.edu.dao.impl.CustomerDAOJdbcImpl"/>
-    <fullyQualifiedTypeName name="cn.swu.edu.CustomerDAO"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="cn.swu.edu.db.JdbcUtils"/>
     <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.BeanHandler"/>
     <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.BeanListHandler"/>
     <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.ScalarHandler"/>
-    <fullyQualifiedTypeName name="cn.swu.edu.domain.Customer"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.Class.Method"/>
     <fullyQualifiedTypeName name="com.sun.jdi.Method"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="cn.swu.edu.servlet.CustomerServlet"/>
+    <fullyQualifiedTypeName name="cn.swu.edu.domain.Customer"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="cn.swu.edu.CustomerDAO"/>
+    <fullyQualifiedTypeName name="cn.swu.edu.dao.impl.CustomerDAOJdbcImpl"/>
 </qualifiedTypeNameHistroy>

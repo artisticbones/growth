@@ -4,12 +4,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import cn.swu.edu.CustomerDAO;
+import cn.swu.edu.dao.impl.CustomerDAOJdbcImpl;
+import cn.swu.edu.domain.Customer;
 
 
 /**
@@ -18,7 +23,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/customerServlet")
 public class CustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
+	private CustomerDAO customerDAO = new CustomerDAOJdbcImpl();
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -88,9 +94,17 @@ public class CustomerServlet extends HttpServlet {
 
 	private void query(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();	
-		out.println("query");
-		System.out.println("query");
+//		PrintWriter out = response.getWriter();	
+//		out.println("query");
+//		System.out.println("query");
+		//1.调用CustomerDAO的getAll()得到Customer集合
+		List<Customer> customer = customerDAO.getAll();
+		
+		//2.把customer的集合放入到request中
+		request.setAttribute("customer", customer);
+		
+		//3.转发页面到index.jsp
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	private void addCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
