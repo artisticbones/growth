@@ -21,4 +21,6 @@ public interface CustomerDAO {
 	 */
 	public long getCountWithName(String name);
 	
+	public List<Customer> getForListWithCriteriaCustomer(CriteriaCustomer cc);
+	
 }

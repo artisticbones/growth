@@ -1,11 +1,10 @@
 package cn.swu.edu.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import cn.swu.edu.CriteriaCustomer;
 import cn.swu.edu.CustomerDAO;
 import cn.swu.edu.dao.impl.CustomerDAOJdbcImpl;
 import cn.swu.edu.domain.Customer;
@@ -14,6 +13,14 @@ class CustomerDAOJdbcImplTest {
 	
 	
 	private CustomerDAO customerDAO = new CustomerDAOJdbcImpl();
+	
+	@Test
+	public void testGetForListWithCriteriaCustomer() {
+		CriteriaCustomer criteriaCustomer = new CriteriaCustomer("o", null, null);
+		List<Customer> customers = customerDAO.getForListWithCriteriaCustomer(criteriaCustomer);
+		
+		System.out.println(customers);
+	}
 	
 	@Test
 	void testGetAll() {

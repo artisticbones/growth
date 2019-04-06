@@ -52,8 +52,9 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="cn.swu.edu.servlet.CustomerServlet"/>
-    <fullyQualifiedTypeName name="cn.swu.edu.domain.Customer"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="cn.swu.edu.CustomerDAO"/>
     <fullyQualifiedTypeName name="cn.swu.edu.dao.impl.CustomerDAOJdbcImpl"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="cn.swu.edu.domain.Customer"/>
+    <fullyQualifiedTypeName name="cn.swu.edu.CriteriaCustomer"/>
 </qualifiedTypeNameHistroy>

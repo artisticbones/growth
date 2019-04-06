@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cn.swu.edu.CriteriaCustomer;
 import cn.swu.edu.CustomerDAO;
 import cn.swu.edu.dao.impl.CustomerDAOJdbcImpl;
 import cn.swu.edu.domain.Customer;
@@ -98,7 +99,14 @@ public class CustomerServlet extends HttpServlet {
 //		out.println("query");
 //		System.out.println("query");
 		//1.调用CustomerDAO的getAll()得到Customer集合
-		List<Customer> customer = customerDAO.getAll();
+		String name = request.getParameter("name");
+		
+		String address = request.getParameter("address");
+		
+		String phone = request.getParameter("phone");
+		
+		CriteriaCustomer cc = new CriteriaCustomer(name, address, phone);
+		List<Customer> customer = customerDAO.getForListWithCriteriaCustomer(cc);
 		
 		//2.把customer的集合放入到request中
 		request.setAttribute("customer", customer);

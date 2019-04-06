@@ -87,3 +87,5 @@ I searched the invoke method,which is inside the reflact package.It has at least
 Trying to implement the fuzzy query function, has not been fully implemented, the temporary implementation of the query function, unlike the previous one is the code to optimize the structure, each function is dedicated to a function, more neat.
 
 If you want to access it,you can try http://120.79.133.21:8080/MVCTutorial/index.jsp
+#### Day 6
+Today I have learned how to implement fuzzy query function.The strange thing is that the error report says that the sql statement is wrong, but after checking and JUnit's test sql is not wrong, I am trying to solve this problem.
