@@ -48,7 +48,7 @@ public class CustomerDAOJdbcImpl extends DAO<Customer> implements CustomerDAO{
 	@Override
 	public List<Customer> getForListWithCriteriaCustomer(CriteriaCustomer cc) {
 		// TODO Auto-generated method stub
-		String sql = "SELECT id,name,address,phone FROM customers WHERE" +
+		String sql = "SELECT id,name,address,phone FROM customers WHERE " +
 		"name LIKE ? AND address LIKE ? AND phone LIKE ?";
 		
 		return getForList(sql, cc.getName(),cc.getAddress(),cc.getPhone());
