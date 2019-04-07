@@ -13,6 +13,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
+	<div style="position:fixed;z-index:-1;width:100%;height:100%;left:0px;top:0px">
+		<img src="../images/city.jpg" width="100%" height="100%"/>
+	</div>
 	<center>
 	<%
 		Object message = request.getAttribute("message");
@@ -27,14 +31,15 @@
 		out.print(date);
 	%>
 	<br><br>
-	
+	<div style="background-color:#80ffff;border:2px;solid:#fff;padding:30;width:30%;margin-top:10%;margin-right:0%;float:right;border-radius:25px">
 	<form action="hello" method="post">
-		user:<input type="text" name="username"> <br><br>
-		pass:<input type="password" name="password"><br><br>
-		age:<input type="text" name="age"><br><br>
-			<input type="submit" value="submit">
+		<p>user:<input type="text" name="username"></p>
+		<p>pass:<input type="password" name="password"></p>
+		<p>age:<input type="text" name="age"></p>
+		<p>	<input type="submit" value="submit"></p>
+		<p><%=date %></p>
 	</form>
-	
+	</div>
 	
 	
 	<%!
@@ -46,7 +51,7 @@
 	<%--JSP注释可以注释掉代码 --%>
 	<!-- html注释不可以注释JSP代码 -->
 	<br>
-	<%=date %>
+	
 	</center>
 </body>
 </html>
