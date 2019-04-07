@@ -90,4 +90,6 @@ If you want to access it,you can try http://120.79.133.21:8080/MVCTutorial/index
 #### Day 6
 Today I have learned how to implement fuzzy query function.The strange thing is that the error report says that the sql statement is wrong, but after checking and JUnit's test sql is not wrong, I am trying to solve this problem.
 
-Now I have solved the problem.
+Now I haven't solved the problem.
+#### Day 7
+I have solved the problem about deploying codes to aliyun.The problem is that the c3p0-config.xml file is not included in the path, the jar is not packaged for c3p0-config.xml, so I created the classes folder and put the c3p0-config.xml file in the classes folder to solve it.
