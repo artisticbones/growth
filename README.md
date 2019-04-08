@@ -22,7 +22,7 @@ title: "My JavaWeb Growth"
 
 --- University: Southwest University
 
---- __*[Aliyun](http://120.79.133.21:8080/LoginServlet/hello2.jsp)*__
+--- __*[Aliyun](http://120.79.133.21:8080/LoginServlet/login.html)*__
 
 --- __*[MyBlog](http://119.23.107.137)*__ : I hope you can pay attention to my blog and correct my mistakes that I do not realized!
 ### The things I do
@@ -95,3 +95,7 @@ Now I haven't solved the problem.
 I have solved the problem about deploying codes to aliyun.The problem is that the c3p0-config.xml file is not included in the path, the jar is not packaged for c3p0-config.xml, so I created the classes folder and put the c3p0-config.xml file in the classes folder to solve it.
 #### Day 8
 The task I finished today is using bootstrap templates to beautify my login page.Now my page is friendly,If you succeed Logining in my page,you will see the webapp's homepage.But the related functions in the hompage have not been fully realized.
+
+As of now,I have completed the first part of the MVC design and some of beautification work,the functions implemented are delete,fuzzy query,increase user,simple query and other operations,but the MVC related code has not been beautified.After the completion,it will beautify.
+
+If you want to access it,you can type http://120.79.133.21:8080/MVCTutorial/*.jsp

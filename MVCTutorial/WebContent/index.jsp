@@ -7,6 +7,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+<!--  <script type="text/javascript">
+	$(function(){
+		$(".delete").click(function(){
+			var content = $(this).parent().parent().find("td:eq(1)").text();
+			var flag = confim("确定删除" + content + "?");
+			return flag;
+		});
+	});
+</script>
+-->
+<script type="text/javascript">
+    $(document).ready(function(){
+		$("#adminDelete").click(function(){
+			if(confirm("Delete Anyway?")){
+				alert("success");
+				return true;
+			}
+			return false;
+		});
+    });
+</script>
 </head>
 <body>
 	
@@ -57,7 +79,8 @@
 					<td><%= customer.getPhone() %></td>
 					<td>
 						<a href="">UPDATE</a>
-						<a href="">DELETE</a>
+						<a  Id="adminDelete" href="delete.action?id=<%= customer.getId()%>" class="btn btn-danger">DELETE</a>
+						<!-- <a href="delete.action?id=<%= customer.getId()%>" class="delete">DELETE</a> -->
 					</td>
 				</tr>
 			<%

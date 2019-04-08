@@ -88,9 +88,20 @@ public class CustomerServlet extends HttpServlet {
 
 	private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();	
-		out.println("delete");
-		System.out.println("delete");
+//		PrintWriter out = response.getWriter();	
+//		out.println("delete");
+//		System.out.println("delete");
+		String idStr = request.getParameter("id");
+		//防止恶意操作
+		int id = 0;
+		
+		try {
+			id = Integer.parseUnsignedInt(idStr);
+			customerDAO.delete(id);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		response.sendRedirect("query.action");
 	}
 
 	private void query(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
