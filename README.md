@@ -93,3 +93,5 @@ Today I have learned how to implement fuzzy query function.The strange thing is 
 Now I haven't solved the problem.
 #### Day 7
 I have solved the problem about deploying codes to aliyun.The problem is that the c3p0-config.xml file is not included in the path, the jar is not packaged for c3p0-config.xml, so I created the classes folder and put the c3p0-config.xml file in the classes folder to solve it.
+#### Day 8
+The task I finished today is using bootstrap templates to beautify my login page.Now my page is friendly,If you succeed Logining in my page,you will see the webapp's homepage.But the related functions in the hompage have not been fully realized.

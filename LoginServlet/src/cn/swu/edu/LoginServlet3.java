@@ -54,7 +54,8 @@ public class LoginServlet3 extends HttpServlet {
 				int count = resultSet.getInt(1);
 				
 				if(count > 0) {
-					out.print("hello" + username);
+					response.sendRedirect("index.html");
+					//out.print("hello" + username);
 				}else {
 					out.print("sorry" + username);
 				}
