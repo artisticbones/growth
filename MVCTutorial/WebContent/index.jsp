@@ -45,8 +45,8 @@
 				<td>Phone:</td>
 				<td><input type="text" name="phone"></td>
 			</tr><tr>
-				<td><input type="submit" name="Query"></td>
-				<td><a href="">Create New Customer</a></td>
+				<td><input type="submit" value="Query"></td>
+				<td><a href="newcustomer.jsp">Create New Customer</a></td>
 			</tr>
 		</table>
 	</form>
@@ -78,7 +78,7 @@
 					<td><%= customer.getAddress()%></td>
 					<td><%= customer.getPhone() %></td>
 					<td>
-						<a href="">UPDATE</a>
+						<a href="edit.action?id=<%= customer.getId() %>">UPDATE</a>
 						<a  Id="adminDelete" href="delete.action?id=<%= customer.getId()%>" class="btn btn-danger">DELETE</a>
 						<!-- <a href="delete.action?id=<%= customer.getId()%>" class="delete">DELETE</a> -->
 					</td>

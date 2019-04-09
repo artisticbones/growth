@@ -99,3 +99,5 @@ The task I finished today is using bootstrap templates to beautify my login page
 As of now,I have completed the first part of the MVC design and some of beautification work,the functions implemented are delete,fuzzy query,increase user,simple query and other operations,but the MVC related code has not been beautified.After the completion,it will beautify.
 
 If you want to access it,you can type http://120.79.133.21:8080/MVCTutorial/*.jsp
+#### Day 9
+Today I learnde how to implement the modify function.But there exits some questions.I tend to solve the problem tomorrow.

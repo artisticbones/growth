@@ -2,7 +2,6 @@ package cn.swu.edu.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
@@ -74,16 +73,64 @@ public class CustomerServlet extends HttpServlet {
 
 	private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();	
-		out.println("edit");
-		System.out.println("edit");
+//		PrintWriter out = response.getWriter();	
+//		out.println("edit");
+//		System.out.println("edit");
+		//1.获取id
+		String forwardPath = "/error.jsp";
+		
+		String idStr = request.getParameter("id");
+		
+		System.out.println(idStr);
+		
+		//2.调用customerDAO的customerDAO.getid方法获取信息和id对应的对象；
+		try {
+			Customer customer = customerDAO.get(Integer.parseInt(idStr));
+			if (customer != null) {
+				forwardPath = "/updatecustomer.jsp";
+				request.setAttribute("customer", customer);
+			}
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+		}
+		//3.将customer放入到request中
+		request.getRequestDispatcher(forwardPath).forward(request, response);
+		//4.响应updatecustomer.jsp页面:转发
+		
 	}
 	
 	private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();	
-		out.println("update");
-		System.out.println("update");
+//		PrintWriter out = response.getWriter();	
+//		out.println("update");
+//		System.out.println("update");
+		//1.获取表单参数: id,name,address,phone,oldName
+		String id = request.getParameter("id");
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		String phone = request.getParameter("phone");
+		String oldName = request.getParameter("oldName");
+		//2.检验name是否被占用:
+		//2.1比较name和oldname是否相同，相同说明namekeyong
+		if(!oldName.equalsIgnoreCase(name)) {
+			long count = customerDAO.getCountWithName(name);
+			//若返回值大于0，则响应updatecustomer.jsp页面,使用转发方式
+			if(count > 0) {
+				//在该页面显示提示错误消息
+				String message = "user " + name + "already exists!";
+				request.setAttribute("message", message);
+				request.getRequestDispatcher("/updatecustomer.jsp").forward(request, response);
+			}
+			Customer customer = new Customer();
+			customer.setId(Integer.parseInt(id));
+			customer.setName(name);
+			customer.setAddress(address);
+			customer.setPhone(phone);
+				
+			customerDAO.update(customer);
+			
+			response.sendRedirect("query.action");
+		}
 	}
 
 	private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -128,9 +175,40 @@ public class CustomerServlet extends HttpServlet {
 
 	private void addCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();	
-		out.println("addCustomer");
-		System.out.println("addCustomer");
+//		PrintWriter out = response.getWriter();	
+//		out.println("addCustomer");
+//		System.out.println("addCustomer");
+		//1.根据表单获取参数：name,address,phone
+		Customer customer = new Customer();
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		String phone = request.getParameter("phone");
+		
+		//2.判断name是否存在
+		/**
+		 * 2.1调用getCountWithName(String name)获取name是否在数据库中
+		 * 2.2 count>0证明有，响应newcustomer.jsp页面，使用转发的方式响应,因需要保留之前填写的数值
+		 * 可以显示一个错误消息：name 被占用
+		 * 使用value="<%= request.getParameter("name") == null ? "" : request.getParameter("name")%>"来回显
+		 */
+		if (customerDAO.getCountWithName(name) > 0) {
+			String message = "user " + name + " already exits,please choose another one!";
+			request.setAttribute("message", message);
+			request.getRequestDispatcher("newcustomer.jsp").forward(request, response);
+			
+		}else {//验证通过把参数封装进Customer对象customer中
+			customer.setName(name);
+			customer.setAddress(address);
+			customer.setPhone(phone);
+		}
+		
+		
+		
+		
+		//调用CustomerDAO的save()方法执行保存
+		customerDAO.save(customer);
+		response.sendRedirect("success2.jsp");
+		
 	}
 
 }
