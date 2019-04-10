@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import cn.swu.edu.CriteriaCustomer;
 import cn.swu.edu.CustomerDAO;
+import cn.swu.edu.dao.factory.CustomerDAOFactory;
 import cn.swu.edu.dao.impl.CustomerDAOJdbcImpl;
 import cn.swu.edu.domain.Customer;
 
@@ -24,7 +25,7 @@ import cn.swu.edu.domain.Customer;
 public class CustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private CustomerDAO customerDAO = new CustomerDAOJdbcImpl();
+	private CustomerDAO customerDAO = CustomerDAOFactory.getInstance().getCustomerDAO();
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -106,31 +107,33 @@ public class CustomerServlet extends HttpServlet {
 //		System.out.println("update");
 		//1.获取表单参数: id,name,address,phone,oldName
 		String id = request.getParameter("id");
+		System.out.println(id);
 		String name = request.getParameter("name");
 		String address = request.getParameter("address");
 		String phone = request.getParameter("phone");
 		String oldName = request.getParameter("oldName");
 		//2.检验name是否被占用:
 		//2.1比较name和oldname是否相同，相同说明namekeyong
-		if(!oldName.equalsIgnoreCase(name)) {
+		if(!(oldName.equalsIgnoreCase(name))) {
 			long count = customerDAO.getCountWithName(name);
 			//若返回值大于0，则响应updatecustomer.jsp页面,使用转发方式
+			System.out.println(count);
 			if(count > 0) {
 				//在该页面显示提示错误消息
 				String message = "user " + name + "already exists!";
 				request.setAttribute("message", message);
 				request.getRequestDispatcher("/updatecustomer.jsp").forward(request, response);
 			}
-			Customer customer = new Customer();
-			customer.setId(Integer.parseInt(id));
-			customer.setName(name);
-			customer.setAddress(address);
-			customer.setPhone(phone);
-				
-			customerDAO.update(customer);
-			
-			response.sendRedirect("query.action");
 		}
+		Customer customer = new Customer();
+		customer.setId(Integer.parseInt(id));
+		customer.setName(name);
+		customer.setAddress(address);
+		customer.setPhone(phone);
+			
+		customerDAO.update(customer);
+		System.out.println(customer);
+		response.sendRedirect("success2.jsp");
 	}
 
 	private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

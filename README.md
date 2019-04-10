@@ -101,3 +101,12 @@ As of now,I have completed the first part of the MVC design and some of beautifi
 If you want to access it,you can type http://120.79.133.21:8080/MVCTutorial/*.jsp
 #### Day 9
 Today I learnde how to implement the modify function.But there exits some questions.I tend to solve the problem tomorrow.
+#### Day 10
+Today I completed all the MVC tutorials.And implemented all the MVC code,and I will deploy it to Aliyun,This part is more important,so I will slow down the next learning process,and put the things I have learned in this period into the blog.The functhon I implemented:
+* addCusomer
+* fuzzy
+* query
+* delete
+* modify
+
+etc.

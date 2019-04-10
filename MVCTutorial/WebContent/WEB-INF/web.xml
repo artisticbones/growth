@@ -28,7 +28,6 @@
     <servlet-name>AddStudentServlet</servlet-name>
     <url-pattern>/addRecord</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>CustomerServlet</servlet-name>
     <servlet-class>cn.swu.edu.servlet.CustomerServlet</servlet-class>
@@ -37,4 +36,10 @@
     <servlet-name>CustomerServlet</servlet-name>
     <url-pattern>*.action</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>cn.swu.edu.servlet.InitServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
 </web-app>
