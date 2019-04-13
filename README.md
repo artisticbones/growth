@@ -114,3 +114,9 @@ etc.
 I started to learn cookie tutorial,and I have already implemented serveral code.They are all in JSP files.At first, these knowledge about cookies is still relatively simple.
 
 The site is http://120.79.133.21:8080/MVCTutorial/login.jsp
+#### Day 13
+Today I have completed the cookie section, which is not as difficult as I thought. I think this part is important for some APIs of cookies. Below are some functions about cookies.
+* Cookie cookie = new Cookie(key,value);
+* response.addCookie(cookie);
+* cookie.setMaxAge(time);//If time is negative, the cookie is not stored, 0 means delete immediately, and the integer represents the cookie survival time.
+* The scope of the cookie is the current directory and subdirectories. You can use the cookie.setPath() method to change the scope of the cookie.
