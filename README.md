@@ -120,3 +120,7 @@ Today I have completed the cookie section, which is not as difficult as I though
 * response.addCookie(cookie);
 * cookie.setMaxAge(time);//If time is negative, the cookie is not stored, 0 means delete immediately, and the integer represents the cookie survival time.
 * The scope of the cookie is the current directory and subdirectories. You can use the cookie.setPath() method to change the scope of the cookie.
+#### Day 14
+I start to learn HttpSession,which is an implicit object in JSP.Session is not similar with cookie,but it contains cookie.We can distinguish different sessions by sessionId.
+
+If you would like to access it,you can type http://120.79.133.21:8080/MVCTutorial/*.jsp in the URL address bar.
