@@ -124,3 +124,6 @@ Today I have completed the cookie section, which is not as difficult as I though
 I start to learn HttpSession,which is an implicit object in JSP.Session is not similar with cookie,but it contains cookie.We can distinguish different sessions by sessionId.
 
 If you would like to access it,you can type http://120.79.133.21:8080/MVCTutorial/*.jsp in the URL address bar.
+#### Day 15
+Today I learned the life cycle of HttpSession and made a lot of notes, but there is nothing to practice in this part, so I implemented the registration function in the LoginServlet I have done before, and I am ready to implement the forgotten password function. I will share the notes later.
+

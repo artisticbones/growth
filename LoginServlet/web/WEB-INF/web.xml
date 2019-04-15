@@ -83,4 +83,13 @@
 		<servlet-name>RedirectServlet</servlet-name>
 		<url-pattern>/redirectServlet</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>cn.swu.edu.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/registerServlet</url-pattern>
+	</servlet-mapping>
 </web-app>
