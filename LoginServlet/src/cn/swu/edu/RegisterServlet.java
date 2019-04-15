@@ -75,7 +75,7 @@ public class RegisterServlet extends HttpServlet {
 			}
 		}else{
 			PrintWriter out = response.getWriter();
-			out.println("对不起，密码不匹配！");
+			out.println("Sorry,Please Check the password!");
 		}
 	}
 
