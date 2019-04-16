@@ -130,6 +130,7 @@ Today I learned the life cycle of HttpSession and made a lot of notes, but there
 As of now, I have completed the summary of HttpSession, and summarize the following points:
 * First, the session is not necessarily created when it is accessed. It needs to look at the current JSP (or servlet) configuration.
 * Second, the session is not destroyed after the browser is closed, and it still exists with the server.
+
 Several important functions:
 * request.getSession(); request.getSession(boolean create);
 * Session.invalidate();// invalidate session
