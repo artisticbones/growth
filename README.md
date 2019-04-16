@@ -126,6 +126,13 @@ I start to learn HttpSession,which is an implicit object in JSP.Session is not s
 If you would like to access it,you can type http://120.79.133.21:8080/MVCTutorial/*.jsp in the URL address bar.
 #### Day 15
 Today I learned the life cycle of HttpSession and made a lot of notes, but there is nothing to practice in this part, so I implemented the registration function in the LoginServlet I have done before, and I am ready to implement the forgotten password function. I will share the notes later.
-
-
-
+#### Day 16
+As of now, I have completed the summary of HttpSession, and summarize the following points:
+* First, the session is not necessarily created when it is accessed. It needs to look at the current JSP (or servlet) configuration.
+* Second, the session is not destroyed after the browser is closed, and it still exists with the server.
+Several important functions:
+* request.getSession(); request.getSession(boolean create);
+* Session.invalidate();// invalidate session
+* session.setMaxInactiveInterval(seconds);//Set the expiration time of the session
+* session.setAttribute();session.getAttribute();session.removeAttribute();
+* session.encodeURL(); //URL rewriting
