@@ -137,3 +137,9 @@ Several important functions:
 * session.setMaxInactiveInterval(seconds);//Set the expiration time of the session
 * session.setAttribute();session.getAttribute();session.removeAttribute();
 * session.encodeURL(); //URL rewriting
+#### Day 18
+Today I completed a simple case called a simple shopping cart.The technology used is HttpSession.The difficulty of this case is the writing of the front-end page.Others are not too difficult.
+
+In principle,the contents of the form are encapsulated into classes and then loaded into the session object,and then taken out when needed.
+
+The site is http://120.79.133.21:8080/SessionTutorial/shoppingcart/step-1.jsp

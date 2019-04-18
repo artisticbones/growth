@@ -1,8 +1,3 @@
 INDEX VERSION 1.4+/home/artisticbones/桌面/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-13775089.index
-572475540.index
-3264578543.index
-3330015756.index
-1670242667.index
-4115489009.index
-92691733.index
+2116181835.index
+1945474291.index
