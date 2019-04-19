@@ -143,3 +143,5 @@ Today I completed a simple case called a simple shopping cart.The technology use
 In principle,the contents of the form are encapsulated into classes and then loaded into the session object,and then taken out when needed.
 
 The site is http://120.79.133.21:8080/SessionTutorial/shoppingcart/step-1.jsp
+#### Day 19
+Today what I learned is absolute path and relative path.The most important thing is "/" represents what.There are two general types: one is the root path representing the current web application (actually the root path of the web container plus request.getContextPath()), and the other is the root path of the web container.
