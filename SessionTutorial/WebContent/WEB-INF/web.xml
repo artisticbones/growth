@@ -12,7 +12,6 @@
     <servlet-name>ProcessStep1Servlet</servlet-name>
     <url-pattern>/processStep1</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>ProcessStep2Servlet</servlet-name>
     <servlet-class>cn.swu.edu.javaweb.ProcessStep2Servlet</servlet-class>
@@ -20,5 +19,14 @@
   <servlet-mapping>
     <servlet-name>ProcessStep2Servlet</servlet-name>
     <url-pattern>/processStep2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>tokenServlet</servlet-name>
+  	<servlet-class>cn.swu.edu.javaweb.TokenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>tokenServlet</servlet-name>
+  	<url-pattern>/tokenServlet</url-pattern>
   </servlet-mapping>
 </web-app>

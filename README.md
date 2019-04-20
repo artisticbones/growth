@@ -145,3 +145,7 @@ In principle,the contents of the form are encapsulated into classes and then loa
 The site is http://120.79.133.21:8080/SessionTutorial/shoppingcart/step-1.jsp
 #### Day 19
 Today what I learned is absolute path and relative path.The most important thing is "/" represents what.There are two general types: one is the root path representing the current web application (actually the root path of the web container plus request.getContextPath()), and the other is the root path of the web container.
+#### Day 20
+Today I completed the tutorial to solve the form re-submission. There are two ways to solve this problem. One is based on the MVC Struts component, the other is handwritten. The two are similar in principle, the difference is random. The value is different. So I finished the first one and didn't write the second one.
+
+The second is basically to make the token a separate class for the reusability of the code, nothing else changes.The important part of my task in this chapter is when the form is repeatedly submitted, which is the principle we need to know.
