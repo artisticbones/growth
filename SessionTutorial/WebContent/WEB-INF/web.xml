@@ -20,13 +20,29 @@
     <servlet-name>ProcessStep2Servlet</servlet-name>
     <url-pattern>/processStep2</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  	<servlet-name>tokenServlet</servlet-name>
-  	<servlet-class>cn.swu.edu.javaweb.TokenServlet</servlet-class>
+    <servlet-name>tokenServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.TokenServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>tokenServlet</servlet-name>
-  	<url-pattern>/tokenServlet</url-pattern>
+    <servlet-name>tokenServlet</servlet-name>
+    <url-pattern>/tokenServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>validateColorServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.ValidateColorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>validateColorServlet</servlet-name>
+    <url-pattern>/validateColorServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>checkCodeServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.CheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkCodeServlet</servlet-name>
+    <url-pattern>/checkCodeServlet</url-pattern>
   </servlet-mapping>
 </web-app>
