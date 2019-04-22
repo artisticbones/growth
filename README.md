@@ -151,3 +151,5 @@ Today I completed the tutorial to solve the form re-submission. There are two wa
 The second is basically to make the token a separate class for the reusability of the code, nothing else changes.The important part of my task in this chapter is when the form is repeatedly submitted, which is the principle we need to know.
 #### Day 21
 What I completed today is the implementation of the image verification code function.In principle,the implementation of the captcha feature is similar to the form repeat submission,so I won't go into too much detail.And I have finished all Session's tutorials.I will give a summary of this chapter later.
+#### Day 22
+Tend to implement forgot password function.I have finished most part of the code.I hope I can finish this code tomorrow.

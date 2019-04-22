@@ -92,4 +92,13 @@
 		<servlet-name>RegisterServlet</servlet-name>
 		<url-pattern>/registerServlet</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ForgetPassServlet</servlet-name>
+		<servlet-class>cn.swu.edu.ForgetPassServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ForgetPassServlet</servlet-name>
+		<url-pattern>/forgetPass</url-pattern>
+	</servlet-mapping>
 </web-app>
