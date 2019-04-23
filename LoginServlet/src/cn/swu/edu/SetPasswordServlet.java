@@ -1,6 +1,7 @@
 package cn.swu.edu;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,17 +24,19 @@ public class SetPasswordServlet extends HttpServlet {
 		String oldPassword = request.getParameter("oldPassword");
 		String newPassword = request.getParameter("newPassword");
 		String again = request.getParameter("again");
-		String username = request.getParameter("username");
+		LoginUsers user = (LoginUsers)request.getSession().getAttribute("user");
 		//2.检查新旧密码是否一致,并检查两次的密码是否一致：
-		if(oldPassword.equals(newPassword)) {
+		if(!(oldPassword.equals(newPassword))) {
 			if(newPassword.equals(again)) {
 				//若一致，则调用update方法
-				userDAO.update(null);
+				user.setPassword(newPassword);
+				userDAO.update(user);
 				//3.成功后，重定向到成功定时返回到login的success.jsp
 				response.sendRedirect(request.getContextPath() + "/success.jsp");
 			}else {
 				//否则，告知用户和旧密码相同
 				request.getSession().setAttribute("message", "两次密码不一致，请重新输入！");
+				request.getRequestDispatcher("/setpassword.jsp").forward(request, response);
 				return;
 			}
 		}else {

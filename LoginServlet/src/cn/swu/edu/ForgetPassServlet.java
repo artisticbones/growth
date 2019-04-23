@@ -22,11 +22,16 @@ public class ForgetPassServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//1.获取参数username
 		String username = request.getParameter("username");
+		System.out.println(username);
 		//2.根据username查询id号
 		UserDAO userDAO = new UserDAO();
-		List<LoginUsers> user = userDAO.getCountWithName(username);
+		LoginUsers users = userDAO.getCountWithName(username);
+		System.out.println(users.getId());
+		System.out.println(users.getPassword());
+		System.out.println(users.getUsername());
+		
 		//3.将id号放到session中
-		request.getSession().setAttribute("user",user);
+		request.getSession().setAttribute("user",users);
 		//4.重定向到setpassword.jsp
 		response.sendRedirect(request.getContextPath() + "/setpassword.jsp");
 	}

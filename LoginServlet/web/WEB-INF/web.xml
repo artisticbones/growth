@@ -101,4 +101,13 @@
 		<servlet-name>ForgetPassServlet</servlet-name>
 		<url-pattern>/forgetPass</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SetPasswordServlet</servlet-name>
+		<servlet-class>cn.swu.edu.SetPasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SetPasswordServlet</servlet-name>
+		<url-pattern>/setPassword</url-pattern>
+	</servlet-mapping>
 </web-app>

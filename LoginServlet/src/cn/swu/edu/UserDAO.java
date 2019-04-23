@@ -5,13 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class UserDAO {
 	public void update(LoginUsers user) {
-		String sql = "update customers set password = '"+user.getPassword()+"' where name = '"+user.getUsername()+"'";
+		String sql = "update test_users set password = '"+user.getPassword()+"' where name = '"+user.getUsername()+"'";
+		System.out.println(sql);
 		Connection connection = null;
+		
 		PreparedStatement preparedStatement = null;
 		
 		try {
@@ -47,9 +48,10 @@ public class UserDAO {
 		
 	}
 	
-	public List<LoginUsers> getCountWithName(String name) {
-		List<LoginUsers> users = new ArrayList<LoginUsers>();
-		String sql = "select * from test_users where name = ?";
+	public LoginUsers getCountWithName(String name) {
+		LoginUsers users = new LoginUsers();
+		String sql = "select id,name,password from test_users where name = '"+name+"'";
+		System.out.println(sql);
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
@@ -60,21 +62,27 @@ public class UserDAO {
 			String url = "jdbc:mysql:///test";
 			String user = "root";
 			String password = "happy1314!";
-			
+		
 			Class.forName(driverClass);
 			connection = DriverManager.getConnection(url,user,password);
 			
 			preparedStatement = connection.prepareStatement(sql);
+			System.out.println(preparedStatement);	
 			
 			resultSet = preparedStatement.executeQuery();
+			System.out.println("5");	
 			while(resultSet.next()) {
 				Integer id = resultSet.getInt(1);
 				String username = resultSet.getString(2);
 				String password2 = resultSet.getString(3);
 				
-				LoginUsers user2 = new LoginUsers(id, username, password2);
-				users.add(user2);
+				System.out.println(id);
+				System.out.println(username);
+				System.out.println(password2);
+
+				users = new LoginUsers(id, username, password2);
 			}
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}finally {

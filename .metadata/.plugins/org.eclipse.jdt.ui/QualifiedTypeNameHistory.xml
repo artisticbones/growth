@@ -57,7 +57,7 @@
     <fullyQualifiedTypeName name="org.apache.tomcat.jni.User"/>
     <fullyQualifiedTypeName name="cn.swu.edu.User"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="cn.swu.edu.UserDAO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="cn.swu.edu.LoginUsers"/>
-    <fullyQualifiedTypeName name="cn.swu.edu.UserDAO"/>
 </qualifiedTypeNameHistroy>

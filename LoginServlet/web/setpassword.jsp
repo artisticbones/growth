@@ -1,5 +1,4 @@
 <%@page import="cn.swu.edu.LoginUsers" %>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,24 +8,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<%=session.getAttribute("message") == null ? "" : session.getAttribute("message")%>
+	<font color="red">
+		<%=session.getAttribute("message") == null ? "" : session.getAttribute("message")%>
+	</font>
 	<%
-		List<LoginUsers> users = (List<LoginUsers>)session.getAttribute("user");
-		for(LoginUsers user:users){
-			String username = user.getUsername();
-			String oldPassword = user.getPassword();
+		LoginUsers users = (LoginUsers)session.getAttribute("user");
+		String username = users.getUsername();
+		String oldPassword = users.getPassword();
 		
 	%>
-	<form action="setPassword" method="post">
-		<input type="hidden" name="username" value="<%= username %>"/>
-		<input type="hidden" name="oldPassword" value="<%= oldPassword %>"/>
-		New Password:<input type="password" name="newPassword"/>
-		Again:<input  type="password" name="again"/>
-		<input type="submit" value="submit" />
-	</form>
-	<% 
-		}
-	%>	
+	<div align="center">
+		<form action="<%=request.getContextPath() %>/setPassword" method="post">
+			<input type="hidden" name="username" value="<%= username %>"/>
+			<input type="hidden" name="oldPassword" value="<%= oldPassword %>"/>
+			New Password:<input type="password" name="newPassword"/><br>
+			Again:<input  type="password" name="again"/><br>
+			<input type="submit" value="submit" />
+		</form>
+	</div>
 </body>
 </html>

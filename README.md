@@ -153,3 +153,5 @@ The second is basically to make the token a separate class for the reusability o
 What I completed today is the implementation of the image verification code function.In principle,the implementation of the captcha feature is similar to the form repeat submission,so I won't go into too much detail.And I have finished all Session's tutorials.I will give a summary of this chapter later.
 #### Day 22
 Tend to implement forgot password function.I have finished most part of the code.I hope I can finish this code tomorrow.
+#### Day 23
+Today I implement the function that you can reset the password,and you also can create an account.As of the webapp is independent of the course, the functionality is not perfect. Every time I complete a task, I try to add content to the system and try to make it friendly.
