@@ -155,3 +155,5 @@ What I completed today is the implementation of the image verification code func
 Tend to implement forgot password function.I have finished most part of the code.I hope I can finish this code tomorrow.
 #### Day 23
 Today I implement the function that you can reset the password,and you also can create an account.As of the webapp is independent of the course, the functionality is not perfect. Every time I complete a task, I try to add content to the system and try to make it friendly.
+#### Day 25
+I tryed to solve a problem that memory leak,Now I haven't solved the problem.I would like to deal it locally.

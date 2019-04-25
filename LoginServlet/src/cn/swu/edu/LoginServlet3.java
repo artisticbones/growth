@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -86,6 +87,15 @@ public class LoginServlet3 extends HttpServlet {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}
+			//释放所有Driver，防止内存泄漏
+			Enumeration<Driver> enumeration = DriverManager.getDrivers();
+			while(enumeration.hasMoreElements()) {
+				try {
+					DriverManager.deregisterDriver(enumeration.nextElement());
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
