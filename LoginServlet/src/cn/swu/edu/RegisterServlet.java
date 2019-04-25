@@ -3,10 +3,11 @@ package cn.swu.edu;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -71,6 +72,15 @@ public class RegisterServlet extends HttpServlet {
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+				}
+				//释放所有Driver，防止内存泄漏
+				Enumeration<Driver> enumeration = DriverManager.getDrivers();
+				while(enumeration.hasMoreElements()) {
+					try {
+						DriverManager.deregisterDriver(enumeration.nextElement());
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		}else{

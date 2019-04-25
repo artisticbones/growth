@@ -1,6 +1,7 @@
 package cn.swu.edu;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,15 +47,14 @@ public class UserDAO {
 				e.printStackTrace();
 			}
 			//释放所有Driver，防止内存泄漏
-                        Enumeration<Driver> enumeration = DriverManager.getDrivers();
-                        while(enumeration.hasMoreElements()) {
-                                try {
-                                        DriverManager.deregisterDriver(enumeration.nextElement());
-                                } catch (SQLException e) {
-                                        e.printStackTrace();
-                                }
-                        }
-
+			Enumeration<Driver> enumeration = DriverManager.getDrivers();
+			while(enumeration.hasMoreElements()) {
+				try {
+					DriverManager.deregisterDriver(enumeration.nextElement());
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 		
 	}

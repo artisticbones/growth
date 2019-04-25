@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.sun.jndi.ldap.Connection"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="cn.swu.edu.UserDAO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="cn.swu.edu.LoginUsers"/>
+    <fullyQualifiedTypeName name="java.sql.Driver"/>
 </qualifiedTypeNameHistroy>
