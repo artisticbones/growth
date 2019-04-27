@@ -157,3 +157,7 @@ Tend to implement forgot password function.I have finished most part of the code
 Today I implement the function that you can reset the password,and you also can create an account.As of the webapp is independent of the course, the functionality is not perfect. Every time I complete a task, I try to add content to the system and try to make it friendly.
 #### Day 25
 I tryed to solve a problem that memory leak,Now I haven't solved the problem.I would like to deal it locally.
+#### Day 26
+Finded a new problem,so I reset the code in order to correct it.
+#### Day 27
+Today I have learned JavaBean and the properties used in JSP Page.It is not difficult that I can totally understand them.Recently I slowed down the progress of learning in order to understand session and cookies well.
