@@ -161,3 +161,6 @@ I tryed to solve a problem that memory leak,Now I haven't solved the problem.I w
 Finded a new problem,so I reset the code in order to correct it.
 #### Day 27
 Today I have learned JavaBean and the properties used in JSP Page.It is not difficult that I can totally understand them.Recently I slowed down the progress of learning in order to understand session and cookies well.
+#### Day 28
+Today I learned the basic EL syntax,which was used as a front-end display to simplify a lot of Java code.The basic constituent element is ${param.value},and EL has automatic type conversion.
+All the site is http://120.79.133.21:8080/SessionTutorial/el.jsp
