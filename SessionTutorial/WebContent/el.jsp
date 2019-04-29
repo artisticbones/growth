@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@page import="cn.swu.edu.javaweb.Student"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -31,6 +32,10 @@
 	%>
 	<br>
 	age:<jsp:getProperty property="age" name="student"/><br>
-	<a href="el2.jsp?score=89">To el2.jsp</a>
+	<a href="el2.jsp?score=89&name=A&name=B&name=C">To el2.jsp</a>
+	
+	<%
+		application.setAttribute("time", new Date());
+	%>
 </body>
 </html>

@@ -4,6 +4,12 @@
   <description>
 		Tomcat Documentation.
 	</description>
+  
+  <context-param>
+  	<param-name>initName</param-name>
+  	<param-value>HELLO</param-value>
+  </context-param>
+	
   <servlet>
     <servlet-name>ProcessStep1Servlet</servlet-name>
     <servlet-class>cn.swu.edu.javaweb.ProcessStep1Servlet</servlet-class>
