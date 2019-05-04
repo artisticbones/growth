@@ -4,12 +4,14 @@
   <description>
 		Tomcat Documentation.
 	</description>
-  
   <context-param>
-  	<param-name>initName</param-name>
-  	<param-value>HELLO</param-value>
+    <param-name>initName</param-name>
+    <param-value>HELLO</param-value>
   </context-param>
-	
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>tomcat</param-value>
+  </context-param>
   <servlet>
     <servlet-name>ProcessStep1Servlet</servlet-name>
     <servlet-class>cn.swu.edu.javaweb.ProcessStep1Servlet</servlet-class>
@@ -42,7 +44,6 @@
     <servlet-name>validateColorServlet</servlet-name>
     <url-pattern>/validateColorServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>checkCodeServlet</servlet-name>
     <servlet-class>cn.swu.edu.javaweb.CheckCodeServlet</servlet-class>
@@ -51,4 +52,24 @@
     <servlet-name>checkCodeServlet</servlet-name>
     <url-pattern>/checkCodeServlet</url-pattern>
   </servlet-mapping>
+  <filter>
+    <filter-name>UserNameFilter</filter-name>
+    <filter-class>cn.swu.edu.javaweb.UserNameFilter</filter-class>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>tomcat</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>UserNameFilter</filter-name>
+    <url-pattern>/hello.jsp</url-pattern>
+  </filter-mapping>
+  <filter>
+  	<filter-name>PasswordFilter</filter-name>
+  	<filter-class>cn.swu.edu.javaweb.PasswordFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>PasswordFilter</filter-name>
+  	<url-pattern>/hello.jsp</url-pattern>
+  </filter-mapping>
 </web-app>

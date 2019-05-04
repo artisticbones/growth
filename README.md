@@ -166,3 +166,6 @@ Today I learned the basic EL syntax,which was used as a front-end display to sim
 All the site is http://120.79.133.21:8080/SessionTutorial/el.jsp
 #### Day 29 
 Today I finished the EL tutorial and are learning the simple label language, EL and labels are used to simplify the front-end code.
+### May
+#### Day 4
+After a few days of rest,I learned the filter from now on,and realized a simple login control function.The configuration method of the filter is very similar to that of the servlet.The API of the doFilter is only one,which is relatively easy.
