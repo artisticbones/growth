@@ -90,14 +90,14 @@ public class LoginServlet3 extends HttpServlet {
 				e.printStackTrace();
 			}
 			//释放所有Driver，防止内存泄漏
-			Enumeration<Driver> enumeration = DriverManager.getDrivers();
+/*			Enumeration<Driver> enumeration = DriverManager.getDrivers();
 			while(enumeration.hasMoreElements()) {
 				try {
 					DriverManager.deregisterDriver(enumeration.nextElement());
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
-			}
+			}*/
 		}
 	}
 
