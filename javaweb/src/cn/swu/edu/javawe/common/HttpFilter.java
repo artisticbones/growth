@@ -35,7 +35,7 @@ public abstract class HttpFilter implements Filter {
 		chain.doFilter(request2, response2);
 	}
 	
-	public abstract void doFilter(HttpServletRequest request ,HttpServletResponse response ,FilterChain chain) ;
+	public abstract void doFilter(HttpServletRequest request ,HttpServletResponse response ,FilterChain chain) throws IOException, ServletException ;
 
 	private FilterConfig filterConfig;
 	

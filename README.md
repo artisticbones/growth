@@ -171,3 +171,7 @@ Today I finished the EL tutorial and are learning the simple label language, EL 
 After a few days of rest,I learned the filter from now on,and realized a simple login control function.The configuration method of the filter is very similar to that of the servlet.The API of the doFilter is only one,which is relatively easy.
 #### Day 5
 Now I finished the Httpfilter code.It can be used for Http request.And this has an important knowledge point, multiple filters are processed in the order of filter-mapping configuration in web.xml, and then executed in reverse order during execution.
+#### Day 6
+Kill the problem which JDBC leads memory leak.
+#### Day 7
+Learn filter's application
