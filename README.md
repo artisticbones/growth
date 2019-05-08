@@ -175,3 +175,5 @@ Now I finished the Httpfilter code.It can be used for Http request.And this has 
 Kill the problem which JDBC leads memory leak.
 #### Day 7
 Learn filter's application
+#### day 8
+Complete the first phase of the filter, ready to try to contact the rights management.
