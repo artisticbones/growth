@@ -175,5 +175,7 @@ Now I finished the Httpfilter code.It can be used for Http request.And this has 
 Kill the problem which JDBC leads memory leak.
 #### Day 7
 Learn filter's application
-#### day 8
+#### Day 8
 Complete the first phase of the filter, ready to try to contact the rights management.
+#### Day 9
+I started trying to do the rights management function today. So far, I just set up a shelf. DAO has not been implemented yet, and JSP is almost finished. I am expected to finish writing the code tomorrow.
