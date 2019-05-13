@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" metadata-complete="true" version="4.0">
-  <!-- 用户信息放入到session中的键的名字 -->
   <context-param>
-  	<param-name>userSessionKey</param-name>
-  	<param-value>USERSESIONKEY</param-value>
+    <param-name>userSessionKey</param-name>
+    <param-value>USERSESIONKEY</param-value>
   </context-param>
-  <!-- 若未登录，需要重定向的页面 -->
   <context-param>
-  	<param-name>redirectPage</param-name>
-  	<param-value>/login/login.jsp</param-value>
+    <param-name>redirectPage</param-name>
+    <param-value>/login/login.jsp</param-value>
   </context-param>
-  <!-- 不需要拦截检查的URL列表 -->
   <context-param>
-  	<param-name>uncheckedUrls</param-name>
-  	<param-value>/login/a.jsp,/login/login.jsp,/login/doLogin.jsp,/login/list.jsp</param-value>
+    <param-name>uncheckedUrls</param-name>
+    <param-value>/login/a.jsp,/login/login.jsp,/login/doLogin.jsp,/login/list.jsp</param-value>
   </context-param>
-  
   <context-param>
     <param-name>password</param-name>
     <param-value>tomcat</param-value>
   </context-param>
   <context-param>
-  	<param-name>encoding</param-name>
-  	<param-value>UTF-8</param-value>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
   </context-param>
   <filter>
     <filter-name>HelloFilter</filter-name>
@@ -64,6 +60,7 @@
     <filter-name>PasswordFilter</filter-name>
     <url-pattern>/hello.jsp</url-pattern>
   </filter-mapping>
+
   <filter>
     <filter-name>NoCacheFilter</filter-name>
     <filter-class>cn.swu.edu.javaweb.cache.NoCacheFilter</filter-class>
@@ -73,20 +70,43 @@
     <url-pattern>/cache/*</url-pattern>
   </filter-mapping>
   <filter>
-  	<filter-name>EncodingFilter</filter-name>
-  	<filter-class>cn.swu.edu.javaweb.practice.EncodingFilter</filter-class>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>cn.swu.edu.javaweb.practice.EncodingFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>EncodingFilter</filter-name>
-  	<url-pattern>/encoding/*</url-pattern>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/encoding/*</url-pattern>
   </filter-mapping>
-  
   <filter>
-  	<filter-name>loginFilter</filter-name>
-  	<filter-class>cn.swu.edu.javaweb.loginfilter.LoginFilter</filter-class>
+    <filter-name>loginFilter</filter-name>
+    <filter-class>cn.swu.edu.javaweb.loginfilter.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>loginFilter</filter-name>
-  	<url-pattern>/login/*</url-pattern>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/login/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>AuthorityServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.controller.AuthorityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthorityServlet</servlet-name>
+    <url-pattern>/authorityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>cn.swu.edu.javaweb.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+    <filter>
+  	<filter-name>AuthorityFilter</filter-name>
+  	<filter-class>cn.swu.edu.javaweb.filter.AuthorityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>AuthorityFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
   </filter-mapping>
 </web-app>

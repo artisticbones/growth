@@ -1,4 +1,4 @@
-package cn.swu.edu.javaweb.loginfilter;
+package cn.swu.edu.javaweb.filter;
 
 import java.io.IOException;
 import java.util.Arrays;

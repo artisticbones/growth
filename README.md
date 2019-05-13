@@ -179,3 +179,5 @@ Learn filter's application
 Complete the first phase of the filter, ready to try to contact the rights management.
 #### Day 9
 I started trying to do the rights management function today. So far, I just set up a shelf. DAO has not been implemented yet, and JSP is almost finished. I am expected to finish writing the code tomorrow.
+#### Day 13
+In the past three days, I have completed the permission management of the filter part. This part is a bit difficult, so it needs to be done slowly.

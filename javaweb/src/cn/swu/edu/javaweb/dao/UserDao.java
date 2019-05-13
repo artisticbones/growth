@@ -22,15 +22,40 @@ public class UserDao {
 	
 		users = new HashMap<String, User>();
 		
-		User user1 = new User("AAA", authorities);
-		users.put("AAA", user1);
-	}
-	
-	User get(String username) {
-		return null;
-	}
-	
-	void update(String username,List<Authority> authorities) {
+		User user1 = new User("tomcat", authorities.subList(0, 2));
+		users.put("tomcat", user1);
 		
+		user1 = new User("AAA", authorities.subList(2, 4));
+		users.put("AAA", user1);
+		
+		user1 = new User("BBB", authorities.subList(0, 4));
+		users.put("BBB", user1);
+	}
+	
+	public User get(String username) {
+		return users.get(username);
+	}
+	
+	public void update(String username,List<Authority> authorities) {
+		users.get(username).setAuthorities(authorities);
+	}
+	
+	public List<Authority> getAuthorities() {
+		return authorities;
+	}
+
+	public List<Authority> getAuthorities(String[] urls) {
+		List<Authority> authorities2 = new ArrayList<Authority>();
+		
+		for(Authority authority: authorities) {
+			if(urls != null) {
+				for(String url:urls) {
+					if(url.equals(authority.getUrl())) {
+						authorities2.add(authority);
+					}
+				}
+			}
+		}
+		return authorities2;
 	}
 }

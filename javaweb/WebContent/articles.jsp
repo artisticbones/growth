@@ -21,7 +21,7 @@
 	<a href="article-4.jsp">Article444 Page</a>
 	<br /><br />
 	
-	<a href="LoginServlet?method=logout">Logout...</a>
+	<a href="logout.jsp">Logout...</a>
 	
 </body>
 </html>
