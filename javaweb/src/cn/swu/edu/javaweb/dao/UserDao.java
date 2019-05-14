@@ -15,20 +15,20 @@ public class UserDao {
 	
 	static {
 		authorities = new ArrayList<>();
-		authorities.add(new Authority("Article-1", "/article-1.jsp"));
-		authorities.add(new Authority("Article-2", "/article-2.jsp"));
-		authorities.add(new Authority("Article-3", "/article-3.jsp"));
-		authorities.add(new Authority("Article-4", "/article-4.jsp"));
+		authorities.add(new Authority("Article-1", "/permission/article-1.jsp"));
+		authorities.add(new Authority("Article-2", "/permission/article-2.jsp"));
+		authorities.add(new Authority("Article-3", "/permission/article-3.jsp"));
+		authorities.add(new Authority("Article-4", "/permission/article-4.jsp"));
 	
 		users = new HashMap<String, User>();
 		
-		User user1 = new User("tomcat", authorities.subList(0, 2));
-		users.put("tomcat", user1);
+//		User user1 = new User("tomcat", authorities.subList(0, 2));
+//		users.put("tomcat", user1);
 		
-		user1 = new User("AAA", authorities.subList(2, 4));
+		User user1 = new User("AAA", authorities.subList(0, 2));
 		users.put("AAA", user1);
 		
-		user1 = new User("BBB", authorities.subList(0, 4));
+		user1 = new User("BBB", authorities.subList(2, 4));
 		users.put("BBB", user1);
 	}
 	

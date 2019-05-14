@@ -107,6 +107,14 @@
   </filter>
   <filter-mapping>
   	<filter-name>AuthorityFilter</filter-name>
-  	<url-pattern>/*</url-pattern>
+  	<url-pattern>/permission/*</url-pattern>
+  </filter-mapping>
+  <filter>
+  	<filter-name>ContentFilter</filter-name>
+  	<filter-class>cn.swu.edu.javaweb.filter.ContentFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>ContentFilter</filter-name>
+  	<url-pattern>/content/bbs.jsp</url-pattern>
   </filter-mapping>
 </web-app>

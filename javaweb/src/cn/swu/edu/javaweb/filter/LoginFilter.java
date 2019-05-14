@@ -10,7 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cn.swu.edu.javawe.common.HttpFilter;
+import cn.swu.edu.javaweb.common.HttpFilter;
 
 public class LoginFilter extends HttpFilter {
 

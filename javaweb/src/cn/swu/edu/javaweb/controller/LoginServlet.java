@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +14,6 @@ import cn.swu.edu.javaweb.pojo.User;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/loginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,6 +42,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	private UserDao userDao = new UserDao();
+	
 	public void login(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -53,7 +52,8 @@ public class LoginServlet extends HttpServlet {
 		User user = userDao.get(username);
 		request.getSession().setAttribute("user", user);
 		//3.重定向到articles.jsp
-		response.sendRedirect(request.getContextPath() + "/articles.jsp");
+		response.sendRedirect(request.getContextPath() + "/permission/articles.jsp");
+		System.out.println(request.getContextPath() + "/permission/articles.jsp");
 	}
 	public void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//1. 获取 HttpSession
@@ -62,6 +62,6 @@ public class LoginServlet extends HttpServlet {
 		request.getSession().invalidate();
 		
 		//3. 重定向到 /loign.jsp
-		response.sendRedirect(request.getContextPath() + "/login.jsp");
+		response.sendRedirect(request.getContextPath() + "/permission/login.jsp");
 	}
 }

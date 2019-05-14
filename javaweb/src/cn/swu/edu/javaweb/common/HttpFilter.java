@@ -1,4 +1,4 @@
-package cn.swu.edu.javawe.common;
+package cn.swu.edu.javaweb.common;
 
 import java.io.IOException;
 

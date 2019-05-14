@@ -10,7 +10,7 @@
 <body>
 	<h4>
 		没有对应的权限, 
-		请 <a href="${pageContext.request.contextPath }/articles.jsp">返回</a>
+		请 <a href="${pageContext.request.contextPath }/permission/articles.jsp">返回</a>
 	</h4>
 </body>
 </html>

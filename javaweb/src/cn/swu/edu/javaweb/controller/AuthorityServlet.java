@@ -1,9 +1,7 @@
 package cn.swu.edu.javaweb.controller;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -57,6 +55,6 @@ public class AuthorityServlet extends HttpServlet {
 		
 		List<Authority> authorityList = userDao.getAuthorities(authorities);
 		userDao.update(username,authorityList);
-		response.sendRedirect(request.getContextPath() + "/authority-manager.jsp");
+		response.sendRedirect(request.getContextPath() + "/permission/authority-manager.jsp");
 	}
 }
