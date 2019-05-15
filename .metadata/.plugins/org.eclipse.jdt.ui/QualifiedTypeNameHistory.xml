@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.activation.DataSource"/>
-    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="com.mchange.v2.c3p0.ComboPooledDataSource"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="cn.swu.edu.test.JdbcUtilsTest"/>
     <fullyQualifiedTypeName name="org.apache.commons.dbutils.QueryRunner"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="cn.swu.edu.javaweb.impl.MyHttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletRequestListener"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSessionListener"/>
 </qualifiedTypeNameHistroy>

@@ -117,4 +117,8 @@
   	<filter-name>ContentFilter</filter-name>
   	<url-pattern>/content/bbs.jsp</url-pattern>
   </filter-mapping>
+  
+  <listener>
+  	<listener-class>cn.swu.edu.javaweb.listener.ServletListener</listener-class>
+  </listener>
 </web-app>
