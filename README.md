@@ -190,4 +190,16 @@ In the past three days, I have completed the permission management of the filter
 #### Day 14
 So far I have completed all the filter tutorials,and started the listener learning,the filter part I wrote a frequently used HttpFilter,used to write the http part of the code later.
 #### Day 15
-Today I learned the listener,the part of the knowledge isn't difficult.So I am not going to talk too much. 
+Today I learned the listener,the part of the knowledge isn't difficult.So I am not going to talk too much.
+#### Day 16
+So far I have completed all the listener tutorials and completed all the code. The more important part of this section is the eight listeners:
+* ServletContextListener
+* ServletRequestListener
+* HttpSessionListener
+* ServletContextAttributeListener
+* ServletRequestAttributeListener
+* HttpSessionAttributeListener
+* HttpSessionBindingListener
+* HttpSessionActivationListener
+
+The most important of the above eight is the first and most commonly used, it is a listener for the context of the servlet. We also need to master some of the APIs of the listener. Generally, there are only two APIs, getName and getValue. The session also needs the getSession function.

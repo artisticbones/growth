@@ -121,4 +121,15 @@
   <listener>
   	<listener-class>cn.swu.edu.javaweb.listener.ServletListener</listener-class>
   </listener>
+  <listener>
+  	<listener-class>cn.swu.edu.javaweb.listener.TestAttributeListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.atguigu.javaweb.test.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -8,9 +8,16 @@
 </head>
 <body>
 	
-	<h4>Test Page</h4>
-	
-	<%= request.getAttribute("requestKey") %>
+	<% 
+		request.setAttribute("name", "ABCD");
+		System.out.println("-----------------------------");
+		
+		request.setAttribute("name", "DEFG");
+		System.out.println("-----------------------------");
+		
+		request.removeAttribute("name");
+		System.out.println("-----------------------------");
+	%>
 	
 </body>
 </html>
