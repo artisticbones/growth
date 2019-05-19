@@ -60,7 +60,6 @@
     <filter-name>PasswordFilter</filter-name>
     <url-pattern>/hello.jsp</url-pattern>
   </filter-mapping>
-
   <filter>
     <filter-name>NoCacheFilter</filter-name>
     <filter-class>cn.swu.edu.javaweb.cache.NoCacheFilter</filter-class>
@@ -94,35 +93,34 @@
     <url-pattern>/authorityServlet</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<servlet-class>cn.swu.edu.javaweb.controller.LoginServlet</servlet-class>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.controller.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<url-pattern>/loginServlet</url-pattern>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
-    <filter>
-  	<filter-name>AuthorityFilter</filter-name>
-  	<filter-class>cn.swu.edu.javaweb.filter.AuthorityFilter</filter-class>
+  <filter>
+    <filter-name>AuthorityFilter</filter-name>
+    <filter-class>cn.swu.edu.javaweb.filter.AuthorityFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>AuthorityFilter</filter-name>
-  	<url-pattern>/permission/*</url-pattern>
+    <filter-name>AuthorityFilter</filter-name>
+    <url-pattern>/permission/*</url-pattern>
   </filter-mapping>
   <filter>
-  	<filter-name>ContentFilter</filter-name>
-  	<filter-class>cn.swu.edu.javaweb.filter.ContentFilter</filter-class>
+    <filter-name>ContentFilter</filter-name>
+    <filter-class>cn.swu.edu.javaweb.filter.ContentFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>ContentFilter</filter-name>
-  	<url-pattern>/content/bbs.jsp</url-pattern>
+    <filter-name>ContentFilter</filter-name>
+    <url-pattern>/content/bbs.jsp</url-pattern>
   </filter-mapping>
-  
   <listener>
-  	<listener-class>cn.swu.edu.javaweb.listener.ServletListener</listener-class>
+    <listener-class>cn.swu.edu.javaweb.listener.ServletListener</listener-class>
   </listener>
   <listener>
-  	<listener-class>cn.swu.edu.javaweb.listener.TestAttributeListener</listener-class>
+    <listener-class>cn.swu.edu.javaweb.listener.TestAttributeListener</listener-class>
   </listener>
   <servlet>
     <servlet-name>TestServlet</servlet-name>
@@ -131,5 +129,13 @@
   <servlet-mapping>
     <servlet-name>TestServlet</servlet-name>
     <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<servlet-class>cn.swu.edu.fileupload.controller.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<url-pattern>/fileupload/uploadServlet</url-pattern>
   </servlet-mapping>
 </web-app>
