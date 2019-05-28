@@ -12,7 +12,7 @@
 		<item value="652" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="899" key="DIALOG_HEIGHT"/>
-		<item value="-455" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
 		<item value="16" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="SourceActionDialog.constructors">
@@ -116,7 +116,7 @@
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="RefactoringWizard.preview">
-		<item value="600" key="width"/>
+		<item value="630" key="width"/>
 		<item value="400" key="height"/>
 	</section>
 	<section name="DialogBounds_AddDelegateMethodsDialog">
