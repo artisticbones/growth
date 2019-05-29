@@ -1,4 +1,4 @@
-package cn.swu.edu.javaweb.common;
+package cn.swu.edu.javaweb.usermanage;
 
 import cn.swu.edu.javaweb.usermanage.User;
 import org.springframework.data.repository.CrudRepository;

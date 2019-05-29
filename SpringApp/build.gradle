@@ -37,6 +37,14 @@ dependencies {
     // Use MySQL Connector-J
     compile 'mysql:mysql-connector-java'
 
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+   // provided group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.1.2.RELEASE'
+
 //    testCompile('junit:junit:4.12')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

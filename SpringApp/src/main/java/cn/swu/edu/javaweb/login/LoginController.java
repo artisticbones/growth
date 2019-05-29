@@ -1,6 +1,6 @@
 package cn.swu.edu.javaweb.login;
 
-import cn.swu.edu.javaweb.common.UserRepository;
+import cn.swu.edu.javaweb.usermanage.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
