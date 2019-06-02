@@ -1,6 +1,5 @@
 package cn.swu.edu.javaweb.common;
 
-import jdk.jfr.DataAmount;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 

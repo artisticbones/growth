@@ -1,19 +1,19 @@
 package cn.swu.edu.javaweb.usermanage;
 
+import cn.swu.edu.javaweb.common.UuidEntity;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-public class User implements UserDetails {
+@EqualsAndHashCode(callSuper = false)
+public class User extends UuidEntity implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
 
     private String password;
 
@@ -22,6 +22,8 @@ public class User implements UserDetails {
     private String realname;
 
     private String email;
+
+    @ManyToMany(fetch = FetchType.EAGER)
 
     @Override
     public boolean isAccountNonExpired() {
@@ -72,13 +74,6 @@ public class User implements UserDetails {
         this.email = email;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getPassword() {
         return password;

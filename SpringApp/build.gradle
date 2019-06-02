@@ -29,6 +29,9 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.webjars/bootstrap
+    compile group: 'org.webjars', name: 'bootstrap', version: '4.3.1'
+
     compile("org.springframework.boot:spring-boot-starter-web")
 
     // JPA Data (We are going to use Repositories, Entities, Hibernate, etc...)
@@ -44,6 +47,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
     compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.1.2.RELEASE'
+    // https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+    compile group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.11.RELEASE'
 
 //    testCompile('junit:junit:4.12')
     testCompile('org.springframework.boot:spring-boot-starter-test')
