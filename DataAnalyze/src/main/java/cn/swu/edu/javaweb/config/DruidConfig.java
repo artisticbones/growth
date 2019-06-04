@@ -13,7 +13,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.AbstractEnvironment;
 import org.springframework.core.env.CompositePropertySource;
 import org.springframework.core.env.MapPropertySource;
-import sun.tools.java.Environment;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
@@ -27,12 +26,13 @@ public class DruidConfig {
     private AbstractEnvironment environment;
 
     @Bean
-    @ConfigurationProperties(prefix = DB_PREFIX)
+    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource druidDataSource(){
         Properties dbProperties = new Properties();
         Map<String,Object> map = new HashMap<>();
         for (org.springframework.core.env.PropertySource<?> propertySource : environment.getPropertySources()) {
             getPropertiesFromSource((PropertySource) propertySource, map);
+//            System.out.println(getPropertiesFromSource((PropertySource) propertySource, map));
         }
         dbProperties.putAll(map);
         DruidDataSource dds;
@@ -54,12 +54,12 @@ public class DruidConfig {
                     map.put(key.replaceFirst(DB_PREFIX, ""), ((MapPropertySource) propertySource).getProperty(key));
             }
         }
-
         if (propertySource instanceof CompositePropertySource) {
             for (org.springframework.core.env.PropertySource<?> s : ((CompositePropertySource) propertySource).getPropertySources()) {
                 getPropertiesFromSource((PropertySource) s, map);
             }
         }
+        System.out.println(propertySource);
     }
 
     @Bean

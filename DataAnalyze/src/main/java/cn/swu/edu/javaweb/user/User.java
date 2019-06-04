@@ -22,4 +22,21 @@ public class User {
     private String image;       //用户头像
     private String lastIp;     //上次登录IP
     private String lastTime;   //上次登录时间
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userUuid='" + userUuid + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", role='" + role + '\'' +
+                ", image='" + image + '\'' +
+                ", lastIp='" + lastIp + '\'' +
+                ", lastTime='" + lastTime + '\'' +
+                '}';
+    }
+
 }

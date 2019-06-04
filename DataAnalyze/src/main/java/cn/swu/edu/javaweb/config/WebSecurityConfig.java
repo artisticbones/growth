@@ -5,10 +5,10 @@ import cn.swu.edu.javaweb.user.User;
 import cn.swu.edu.javaweb.user.UserRepository;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.servlet.WebSecurityEnablerConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -23,17 +23,32 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-public class WebSecurityConfig extends WebSecurityEnablerConfiguration {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private static final Logger LOGGER = (Logger) LoggerFactory.getLogger(WebSecurityConfig.class);
 
+    @Override
     protected void configure(HttpSecurity http) throws Exception{//配置策略
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("/static/**").
-                permitAll().anyRequest().authenticated().and().formLogin().
-                loginPage("/login").permitAll().successHandler(loginSuccessHandler()).
-                and().logout().permitAll().invalidateHttpSession(true).
-                deleteCookies("JSESSIONID").logoutSuccessHandler(logoutSuccessHandler()).
-                and().sessionManagement().maximumSessions(10).expiredUrl("/login");
+        http.authorizeRequests()
+                .antMatchers("/static/**")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .permitAll()
+                .successHandler(loginSuccessHandler())
+                .and()
+                .logout()
+                .permitAll()
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
+                .logoutSuccessHandler(logoutSuccessHandler())
+                .and()
+                .sessionManagement()
+                .maximumSessions(10)
+                .expiredUrl("/login");
     }
 
     private SavedRequestAwareAuthenticationSuccessHandler loginSuccessHandler() {//登入处理
@@ -59,7 +74,7 @@ public class WebSecurityConfig extends WebSecurityEnablerConfiguration {
     }
 
     @Bean
-    private UserDetailsService userDetailsService() {
+    public UserDetailsService userDetailsService() {
         return new UserDetailsService() {
 
             @Autowired

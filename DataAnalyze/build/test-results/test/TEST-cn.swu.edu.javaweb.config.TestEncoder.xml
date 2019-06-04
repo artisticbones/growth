@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cn.swu.edu.javaweb.config.TestEncoder" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-05-31T08:52:43" hostname="think" time="0.116">
+<testsuite name="cn.swu.edu.javaweb.config.TestEncoder" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-06-03T12:40:29" hostname="think" time="0.076">
   <properties/>
-  <testcase name="encoder" classname="cn.swu.edu.javaweb.config.TestEncoder" time="0.116"/>
-  <system-out><![CDATA[$2a$04$85Sj8Bcc8itSAKGPbQcANOyJRVfGG5QHUGUgjLK2evWfIAY7ZHvoK
+  <testcase name="encoder" classname="cn.swu.edu.javaweb.config.TestEncoder" time="0.076"/>
+  <system-out><![CDATA[$2a$04$K9uYYMHPHnhYQVIVpvWxhOhdxXlU1fWOJNRP2RqucMjKUOdIyPWpe
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
