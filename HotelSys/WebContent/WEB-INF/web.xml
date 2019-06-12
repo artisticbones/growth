@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.htm</location>
+    </error-page>
+	
+	<welcome-file-list>
+	    <welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>AuthInfoExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.authinfo.controller.AuthInfoExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuthInfoExcelServlet</servlet-name>
+		<url-pattern>/AuthInfoExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AuthInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.authinfo.controller.AuthInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuthInfoServlet</servlet-name>
+		<url-pattern>/AuthInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BillInfoExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.billinfo.controller.BillInfoExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BillInfoExcelServlet</servlet-name>
+		<url-pattern>/BillInfoExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BillInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.billinfo.controller.BillInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BillInfoServlet</servlet-name>
+		<url-pattern>/BillInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ExitSystemServlet</servlet-name>
+		<servlet-class>com.inks.hb.common.ExitSystemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ExitSystemServlet</servlet-name>
+		<url-pattern>/ExitSystemServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FloorInfoExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.floorinfo.controller.FloorInfoExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FloorInfoExcelServlet</servlet-name>
+		<url-pattern>/FloorInfoExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FloorInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.floorinfo.controller.FloorInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FloorInfoServlet</servlet-name>
+		<url-pattern>/FloorInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueryFloorNameServlet</servlet-name>
+		<servlet-class>com.inks.hb.floorinfo.controller.QueryFloorNameServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryFloorNameServlet</servlet-name>
+		<url-pattern>/QueryFloorNameServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selectFloorIdServlet</servlet-name>
+		<servlet-class>com.inks.hb.floorinfo.controller.selectFloorIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectFloorIdServlet</servlet-name>
+		<url-pattern>/selectFloorIdServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertLoginServlet</servlet-name>
+		<servlet-class>com.inks.hb.login.controller.InsertLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertLoginServlet</servlet-name>
+		<url-pattern>/InsertLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LoginExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.login.controller.LoginExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginExcelServlet</servlet-name>
+		<url-pattern>/LoginExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>LoginTableServlet</servlet-name>
+		<servlet-class>com.inks.hb.login.controller.LoginTableServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginTableServlet</servlet-name>
+		<url-pattern>/LoginTableServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueryLoginInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.login.controller.QueryLoginInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryLoginInfoServlet</servlet-name>
+		<url-pattern>/QueryLoginInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueryLoginNameServlet</servlet-name>
+		<servlet-class>com.inks.hb.login.controller.QueryLoginNameServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryLoginNameServlet</servlet-name>
+		<url-pattern>/QueryLoginNameServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdatePwdServlet</servlet-name>
+		<servlet-class>com.inks.hb.login.controller.UpdatePwdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdatePwdServlet</servlet-name>
+		<url-pattern>/UpdatePwdServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UploadFileServlet</servlet-name>
+		<servlet-class>com.inks.hb.login.controller.UploadFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadFileServlet</servlet-name>
+		<url-pattern>/UploadFileServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogInfoExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.logInfo.controller.LogInfoExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogInfoExcelServlet</servlet-name>
+		<url-pattern>/LogInfoExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.logInfo.controller.LogInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogInfoServlet</servlet-name>
+		<url-pattern>/LogInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CheckInfoExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.CheckInfoExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckInfoExcelServlet</servlet-name>
+		<url-pattern>/CheckInfoExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CheckInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.CheckInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckInfoServlet</servlet-name>
+		<url-pattern>/CheckInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DoCheckInServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.DoCheckInServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DoCheckInServlet</servlet-name>
+		<url-pattern>/DoCheckInServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertAndUpdateCheckServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.InsertAndUpdateCheckServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertAndUpdateCheckServlet</servlet-name>
+		<url-pattern>/InsertAndUpdateCheckServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>OrderInfoExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.OrderInfoExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderInfoExcelServlet</servlet-name>
+		<url-pattern>/OrderInfoExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.OrderInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderInfoServlet</servlet-name>
+		<url-pattern>/OrderInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueryOrderInfoServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.QueryOrderInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryOrderInfoServlet</servlet-name>
+		<url-pattern>/QueryOrderInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selectOrderServlet</servlet-name>
+		<servlet-class>com.inks.hb.orderinfo.controller.selectOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectOrderServlet</servlet-name>
+		<url-pattern>/selectOrderServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertRoomServlet</servlet-name>
+		<servlet-class>com.inks.hb.room.controller.InsertRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertRoomServlet</servlet-name>
+		<url-pattern>/InsertRoomServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueryRoomNameServlet</servlet-name>
+		<servlet-class>com.inks.hb.room.controller.QueryRoomNameServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryRoomNameServlet</servlet-name>
+		<url-pattern>/QueryRoomNameServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RoomServlet</servlet-name>
+		<servlet-class>com.inks.hb.room.controller.RoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomServlet</servlet-name>
+		<url-pattern>/RoomServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selectRomeIdServlet</servlet-name>
+		<servlet-class>com.inks.hb.room.controller.selectRomeIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectRomeIdServlet</servlet-name>
+		<url-pattern>/selectRomeIdServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selectRomeServlet</servlet-name>
+		<servlet-class>com.inks.hb.room.controller.selectRomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectRomeServlet</servlet-name>
+		<url-pattern>/selectRomeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateRoomServlet</servlet-name>
+		<servlet-class>com.inks.hb.room.controller.UpdateRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateRoomServlet</servlet-name>
+		<url-pattern>/UpdateRoomServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertRoomTypeServlet</servlet-name>
+		<servlet-class>com.inks.hb.roomtype.controller.InsertRoomTypeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertRoomTypeServlet</servlet-name>
+		<url-pattern>/InsertRoomTypeServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>QueryRoomTypeNameServlet</servlet-name>
+		<servlet-class>com.inks.hb.roomtype.controller.QueryRoomTypeNameServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryRoomTypeNameServlet</servlet-name>
+		<url-pattern>/QueryRoomTypeNameServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RoomInfoExcelServlet</servlet-name>
+		<servlet-class>com.inks.hb.roomtype.controller.RoomInfoExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomInfoExcelServlet</servlet-name>
+		<url-pattern>/RoomInfoExcelServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RoomTypeServlet</servlet-name>
+		<servlet-class>com.inks.hb.roomtype.controller.RoomTypeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomTypeServlet</servlet-name>
+		<url-pattern>/RoomTypeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>selectRomeTypeIdServlet</servlet-name>
+		<servlet-class>com.inks.hb.roomtype.controller.selectRomeTypeIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectRomeTypeIdServlet</servlet-name>
+		<url-pattern>/selectRomeTypeIdServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
