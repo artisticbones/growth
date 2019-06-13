@@ -40,6 +40,14 @@
     <servlet-name>ListBookServlet</servlet-name>
     <url-pattern>/listBookServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteCartServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.shoppingcart.controller.DeleteCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteCartServlet</servlet-name>
+    <url-pattern>/deleteCartServlet</url-pattern>
+  </servlet-mapping>
   <filter>
     <filter-name>CommonFilter</filter-name>
     <filter-class>cn.swu.edu.javaweb.common.CommonFilter</filter-class>

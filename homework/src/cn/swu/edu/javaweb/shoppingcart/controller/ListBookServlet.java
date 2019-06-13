@@ -2,6 +2,7 @@ package cn.swu.edu.javaweb.shoppingcart.controller;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,7 +27,9 @@ public class ListBookServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		List<Book> books = bookDao.getAll();
+		Map<String, Book> books = (Map<String, Book>) bookDao.getAll();
+		System.out.println("1");
+		
 		
 		//存放到request域对象中，交给jsp显示
 		request.setAttribute("books", books);

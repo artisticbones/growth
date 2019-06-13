@@ -37,6 +37,7 @@
 			</tr>
 		</table>
 	</form>
+	<a href="<%=request.getContextPath() %>/listBookServlet">新购物车</a>
 	
 </body>
 </html>

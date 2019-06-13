@@ -15,4 +15,10 @@ public interface BookDao {
 	
 	//将用户想买的书的id与购物车关联
 	public void buyBook(String id,Cart cart);
+
+	public void deleteBook(String id, Cart cart) throws CartNotFoundException;
+
+	public void updateQuantity(String id, Cart cart, String quantity) throws CartNotFoundException;
+
+	public void clearCart(Cart cart) throws CartNotFoundException;
 }

@@ -7,7 +7,7 @@
 <body>
 
 <%--Servlet传递过来的是一个Map对象，要显示所有的书籍，就需要遍历Map集合（EL表达式和JSTL标签合用）--%>
-<table border="1px">
+<table border="1">
     <tr>
         <td>书籍编号</td>
         <td>名称</td>
@@ -23,6 +23,7 @@
             <td>${me.value.author}</td>
             <td>${me.value.description}</td>
             <td>${me.value.price}</td>
+            <td><a href="${pageContext.request.contextPath }/servlet/BuyServlet?bookid=${me.key }">购买</a></td>
         </tr>
     </c:forEach>
 

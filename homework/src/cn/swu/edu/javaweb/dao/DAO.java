@@ -1,27 +1,31 @@
 package cn.swu.edu.javaweb.dao;
 
-import cn.swu.edu.javaweb.db.JdbcUtils;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.sql.Connection;
+import java.util.List;
+
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.sql.Connection;
-import java.util.List;
+import cn.swu.edu.javaweb.db.JdbcUtils;
 
 /**
  * 封装了基本的CRUD的方法，以供子类使用
  * 当前DAO 直接在方法中获取数据库的链接
  * @param <T>:当前DAO 处理的实体类的类型是什么
  * @author artisticbones
+ * @param <K>
  */
 public class DAO<T> {
 
     private QueryRunner queryRunner = new QueryRunner();
 
     private Class<T> clazz;
+    
+    //private Class<K> clazz2;
 
     public DAO() {
         Type superClass = getClass().getGenericSuperclass();
@@ -33,6 +37,7 @@ public class DAO<T> {
             if(typeArgs != null && typeArgs.length > 0) {
                 if(typeArgs[0] instanceof Class) {
                     clazz = (Class<T>) typeArgs[0];
+                   // clazz2 = (Class<K>) typeArgs[0];
                 }
             }
         }
@@ -59,6 +64,20 @@ public class DAO<T> {
         return null;
     }
 
+//    public Map<T, K> getForMap(String sql,Object ...args) {
+//		Connection connection = null;
+//		
+//		try {
+//			connection = JdbcUtils.getConnection();
+//			return (Map<T, K>) queryRunner.query(connection, sql, new MapListHandler(),args);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//    	
+//    	return null;
+//    }
     /**
      * 返回T所对应的list
      * @param sql
