@@ -61,7 +61,7 @@
 	<br><br>
 
 	
-	<form action="fileUploadServlet" method="post" enctype="multipart/form-data">
+	<form action="<%=request.getContextPath() %>/fileUploadServlet" method="post" enctype="multipart/form-data">
 		
 		<table>
 			<tr class="file">

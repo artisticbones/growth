@@ -7,7 +7,6 @@ import java.util.Properties;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
 
 import cn.swu.edu.javaweb.fileupload.utils.FileUploadProperties;
 
@@ -15,7 +14,6 @@ import cn.swu.edu.javaweb.fileupload.utils.FileUploadProperties;
  * Application Lifecycle Listener implementation class FileUploadListener
  *
  */
-@WebListener
 public class FileUploadListener implements ServletContextListener {
 
     /**
@@ -46,6 +44,8 @@ public class FileUploadListener implements ServletContextListener {
 			for(Map.Entry<Object, Object> prop: properties.entrySet()){
 				String propertyName = (String) prop.getKey();
 				String propertyValue = (String) prop.getValue();
+				System.out.println(propertyName);
+				System.out.println(propertyValue);
 				
 				FileUploadProperties.getInstance().addProperty(propertyName, propertyValue);
 			}

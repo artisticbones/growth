@@ -12,6 +12,10 @@
 </head>
 <body>
     <h4>登录成功</h4>
-    <a href="<%=request.getContextPath() %>/webpages/shoppingcart/step-1.jsp">购物车</a>
+    <a href="<%= request.getContextPath() %>/webpages/shoppingcart/step-1.jsp">购物车</a>
+    <br><br>
+    <a href="<%= request.getContextPath()%>/webpages/fileupload/upload.jsp">文件上传</a>
+    <br><br>
+    <a href="<%= request.getContextPath()%>/download/download.pdf">文档说明</a>
 </body>
 </html>

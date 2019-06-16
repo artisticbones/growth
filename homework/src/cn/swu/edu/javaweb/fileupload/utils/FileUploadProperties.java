@@ -23,6 +23,7 @@ public class FileUploadProperties {
 	}
 	
 	public String getProperty(String propertyName) {
+		System.out.println(properties.get(propertyName));
 		return properties.get(propertyName);
 	}
 }
