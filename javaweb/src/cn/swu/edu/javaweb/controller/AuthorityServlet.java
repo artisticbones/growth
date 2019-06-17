@@ -45,7 +45,7 @@ public class AuthorityServlet extends HttpServlet {
 		
 		request.setAttribute("user", user);
 		request.setAttribute("authorities", userDao.getAuthorities());
-		request.getRequestDispatcher("/authority-manager.jsp").forward(request, response);
+		request.getRequestDispatcher("/permission/authority-manager.jsp").forward(request, response);
 	}
 	
 	public void updateAuthorities(HttpServletRequest request, HttpServletResponse response) 

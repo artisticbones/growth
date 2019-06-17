@@ -122,20 +122,22 @@ public class FileUploadServlet extends HttpServlet {
 		inputStream.close();
 		out.close();
 		
-		System.out.println(filePath);
+		System.out.println("filePath-->" + filePath);
 	}
 
 	private void vaidateExtName(List<FileUploadBean> beans) {
 		String exts = FileUploadProperties.getInstance().getProperty("exts");
 		List<String> extList = Arrays.asList(exts.split(","));
-		System.out.println(extList);
+		for(String ext :extList) {
+			System.out.println("extList-->" + ext);
+		}
 		
 		for(FileUploadBean bean: beans){
 			String fileName = bean.getFileName();
-			System.out.println(fileName.indexOf(".")); 
+			System.out.println("fileName-->" + fileName); 
 			
 			String extName = fileName.substring(fileName.lastIndexOf(".") + 1);
-			System.out.println(extName); 
+			System.out.println("extName-->" + extName); 
 			
 			if(!extList.contains(extName)){
 				throw new InvalidExtNameException(fileName + "文件的扩展名不合法");
@@ -227,7 +229,9 @@ public class FileUploadServlet extends HttpServlet {
 	private ServletFileUpload getServletFileUpload() {
 		String fileMaxSize = FileUploadProperties.getInstance().getProperty("file.max.size");
 		String totalFileMaxSize = FileUploadProperties.getInstance().getProperty("total.file.max.size");
-		System.out.println(totalFileMaxSize);
+		
+		System.out.println("fileMaxSize-->" + fileMaxSize);
+		System.out.println("totalFileMaxSize-->" + totalFileMaxSize);
 		
 		DiskFileItemFactory factory = new DiskFileItemFactory();
 		

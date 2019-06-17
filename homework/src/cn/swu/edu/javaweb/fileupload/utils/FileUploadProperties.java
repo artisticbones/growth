@@ -19,11 +19,11 @@ public class FileUploadProperties {
 	
 	public void addProperty(String propertyName,String propertyValue) {
 		// TODO Auto-generated method stub
-		properties.put(propertyName, propertyName);
+		properties.put(propertyName, propertyValue);
 	}
 	
 	public String getProperty(String propertyName) {
-		System.out.println(properties.get(propertyName));
+		System.out.println("获取到的property-->" + properties.get(propertyName));
 		return properties.get(propertyName);
 	}
 }

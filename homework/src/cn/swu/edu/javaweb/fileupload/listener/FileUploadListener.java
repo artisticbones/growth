@@ -44,8 +44,8 @@ public class FileUploadListener implements ServletContextListener {
 			for(Map.Entry<Object, Object> prop: properties.entrySet()){
 				String propertyName = (String) prop.getKey();
 				String propertyValue = (String) prop.getValue();
-				System.out.println(propertyName);
-				System.out.println(propertyValue);
+				System.out.println("propertyName-->" + propertyName);
+				System.out.println("propertyValue-->" + propertyValue);
 				
 				FileUploadProperties.getInstance().addProperty(propertyName, propertyValue);
 			}

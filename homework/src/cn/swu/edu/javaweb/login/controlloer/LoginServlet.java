@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
             //3.利用反射获取具体的方法
             method.invoke(this,request,response);
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-            response.sendRedirect("error.jsp");
+            response.sendRedirect("/404.html");
         }
     }
 
