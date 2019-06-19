@@ -39,7 +39,8 @@ public class CommonFilter extends HttpFilter {
         if(url.endsWith("/homework/login.action") 
         		|| url.endsWith("/homework/login.jsp") 
         		|| url.endsWith("/homework/validateColorServlet") 
-        		|| url.endsWith("/homework/register.html"))
+        		|| url.endsWith("/homework/register.jsp")
+        		|| url.endsWith("/homework/404.jsp"))
         	check = false;
         if (check) {
             // 判断session中此值是否存在

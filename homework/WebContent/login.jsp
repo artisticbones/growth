@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Login</title>
+  <title>程飞天的WEB系统 - 登录</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -26,9 +26,6 @@
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
-	<font color="red">
-		<%= session.getAttribute("message") == null ? "" : session.getAttribute("message") %>
-	</font>
       <div class="col-xl-10 col-lg-12 col-md-9">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -41,6 +38,12 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
+                  <div class="text-center">
+                    <font color="red">
+                  		<%= session.getAttribute("message") == null ? "" : session.getAttribute("message") %>
+                  	</font>
+                  </div>
+                  
                   <form class="user" action="<%=request.getContextPath() %>/login.action" method="post">
                     <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="请输入用户名" name="username">

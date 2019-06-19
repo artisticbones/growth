@@ -59,16 +59,16 @@ public class LoginServlet extends HttpServlet {
 	            //3.匹配则重定向到主页
 				HttpSession session = request.getSession();
                 session.setAttribute("username", username);
-	            response.sendRedirect(request.getContextPath() + "/hello.jsp");
+	            response.sendRedirect(request.getContextPath() + "/bootstrap/index.jsp");
 	        }else {
 	            //4.否则重定向到登录页面
 	        	request.getSession().setAttribute("message", "验证码不一致！");
-				response.sendRedirect(request.getContextPath() + "/index.jsp");
+				response.sendRedirect(request.getContextPath() + "/login.jsp");
 				return;
 	        }
 		}else {
 			request.getSession().setAttribute("message", "用户名或密码不正确！");
-			response.sendRedirect(request.getContextPath() + "/index.jsp");
+			response.sendRedirect(request.getContextPath() + "/login.jsp");
 		}
 		//System.out.println(loginUser);
 //		if(paramCode != null && paramCode.equals(sessionCode)) {
@@ -84,22 +84,28 @@ public class LoginServlet extends HttpServlet {
         //1.获取用户名和密码
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String repeatPassword = request.getParameter("repeatPassword");
         System.out.println(username);
         LoginUser loginUser = new LoginUser();
         System.out.println("1");
         //不检查是否为空（在前端监测比在后端检查要方便）
         //2.调用save方法将信息存入数据库
         if (username != null && password != null){
-            System.out.println("2");
-            loginUser.setUsername(username);
-            loginUser.setPassword(password);
-            System.out.println("3");
-            loginUserDAO.save(loginUser);
-            System.out.println("4");
-            response.sendRedirect("index.jsp");
+        	if(password.equals(repeatPassword)) {
+	            System.out.println("2");
+	            loginUser.setUsername(username);
+	            loginUser.setPassword(password);
+	            System.out.println("3");
+	            loginUserDAO.save(loginUser);
+	            System.out.println("4");
+	            response.sendRedirect("index.jsp");
+            }else {
+            	request.getSession().setAttribute("message", "两次密码不一致");
+            	response.sendRedirect(request.getContextPath() + "/register.jsp");
+            }
         }else {
             request.setAttribute("message","用户名或密码不合规范！");
-            request.getRequestDispatcher("register.jsp").forward(request,response);
+            request.getRequestDispatcher(request.getContextPath() + "/register.jsp").forward(request,response);
         }
     }
 }

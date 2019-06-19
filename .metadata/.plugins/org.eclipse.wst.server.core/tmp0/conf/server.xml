@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/home/artisticbones/Desktop/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/artisticbones/Desktop/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/javaweb" path="/javaweb" reloadable="true" source="org.eclipse.jst.jee.server:javaweb"/><Context docBase="/home/artisticbones/Desktop/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ReadFromDoc" path="/ReadFromDoc" reloadable="true" source="org.eclipse.jst.jee.server:ReadFromDoc"/><Context docBase="/home/artisticbones/Desktop/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/homework" path="/homework" reloadable="true" source="org.eclipse.jst.jee.server:homework"/></Host>
+      <Context docBase="/home/artisticbones/Desktop/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/artisticbones/Desktop/study/java/JavaWebWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/homework" path="/homework" reloadable="true" source="org.eclipse.jst.jee.server:homework"/></Host>
     </Engine>
   </Service>
 </Server>
