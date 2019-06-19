@@ -145,7 +145,7 @@
       
       <!-- Nav Item - Download or display pdf -->
       <li class="nav-item">
-      	<a class="nav-link" href="<%= request.getContextPath()%>/download/download.pdf">
+      	<a class="nav-link" href="<%= request.getContextPath()%>/pdf/web/viewer.html?file=http://localhost:8080/homework/download/linux-device-drivers.pdf">
       		<i class="fas fa-fw fa-table"></i>
       		<span>Document</span>
       	</a>

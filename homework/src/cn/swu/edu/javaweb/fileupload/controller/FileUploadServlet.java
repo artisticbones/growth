@@ -70,8 +70,8 @@ public class FileUploadServlet extends HttpServlet {
 			//5. 把上传的信息保存到数据库中
 			saveBeans(beans);
 			
-			//6. 删除临时文件夹的临时文件
-			FileUtils.delAllFile(TEMP_DIR);
+//			//6. 删除临时文件夹的临时文件
+//			FileUtils.delAllFile(TEMP_DIR);
 			
 			path = "/webpages/fileupload/success.jsp";
 			
@@ -216,7 +216,7 @@ public class FileUploadServlet extends HttpServlet {
 		String extName = fileName.substring(fileName.lastIndexOf("."));
 		Random random = new Random();
 		
-		String filePath = getServletContext().getRealPath(FILE_PATH) + "/" + System.currentTimeMillis() + random.nextInt(100000) + extName;
+		String filePath = getServletContext().getRealPath(FILE_PATH) + System.currentTimeMillis() + random.nextInt(100000) + extName;
 		return filePath;
 	}
 

@@ -36,24 +36,31 @@ public class FileUtils {
 		if (!file.isDirectory()) {
 			return flag;
 		}
-		String[] tempList = file.list();
-		File temp = null;
-		for (int i = 0; i < tempList.length; i++) {
-			if (path.endsWith(File.separator)) {
-				temp = new File(path + tempList[i]);
-			} else {
-				temp = new File(path + File.separator + tempList[i]);
+		
+		try {
+			String[] tempList = file.list();
+			File temp = null;
+			for (int i = 0; i < tempList.length; i++) {
+				if (path.endsWith(File.separator)) {
+					temp = new File(path + tempList[i]);
+				} else {
+					temp = new File(path + File.separator + tempList[i]);
+				}
+				if (temp.isFile()) {
+					temp.delete();
+				}
+				if (temp.isDirectory()) {
+					// 先删除文件夹里面的文件
+					delAllFile(path + "/" + tempList[i]);
+					// 再删除空文件夹
+					delFolder(path + "/" + tempList[i]);
+					flag = true;
+				}
 			}
-			if (temp.isFile()) {
-				temp.delete();
-			}
-			if (temp.isDirectory()) {
-				// 先删除文件夹里面的文件
-				delAllFile(path + "/" + tempList[i]);
-				// 再删除空文件夹
-				delFolder(path + "/" + tempList[i]);
-				flag = true;
-			}
+		} catch (NullPointerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("没有临时文件");
 		}
 		
 		return flag;
