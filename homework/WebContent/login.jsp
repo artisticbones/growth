@@ -4,6 +4,8 @@
 <head>
 
   <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -57,12 +59,13 @@
                     <div class="form-group"> 
                     	<img alt="" src="<%= request.getContextPath()%>/validateColorServlet">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" id="customCheck">
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
+                     -->
                     <button type="submit" class="btn btn-primary btn-user btn-block">登录</button>
                     <hr>
                     <a href="#" class="btn btn-google btn-user btn-block">
@@ -74,7 +77,7 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    <a class="small" href="<%=request.getContextPath() %>/register.jsp">Create an Account!</a>
                   </div>
                 </div>
               </div>

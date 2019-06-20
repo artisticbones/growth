@@ -19,7 +19,7 @@ public class CommonFilter extends HttpFilter {
 			throws IOException, ServletException {
 		
 		response.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
+        //response.setContentType("text/html;charset=utf-8");
 		//设置响应报头允许当前应用被跨域请求（CROS）
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		
@@ -40,8 +40,10 @@ public class CommonFilter extends HttpFilter {
         		|| url.endsWith("/homework/login.jsp") 
         		|| url.endsWith("/homework/validateColorServlet") 
         		|| url.endsWith("/homework/register.jsp")
-        		|| url.endsWith("/homework/404.jsp"))
+        		|| url.endsWith("/homework/404.jsp") 
+        		|| url.endsWith("/homework/register.action")) {
         	check = false;
+        }
         if (check) {
             // 判断session中此值是否存在
             if (session.getAttribute("username") != null) {

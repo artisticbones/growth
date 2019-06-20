@@ -10,4 +10,6 @@ public interface LoginUserDAO {
     public void update(LoginUser loginUser);
 
     public LoginUser findUser(String username, String password);
+
+	public long getCountWithName(String name);
 }

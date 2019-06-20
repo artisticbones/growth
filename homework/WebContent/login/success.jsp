@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="chengfeitian">
 
-  <title>SB Admin 2 - Charts</title>
+  <title>SB Admin 2 - Blank</title>
 
   <!-- Custom fonts for this template-->
-  <link href="<%=request.getContextPath() %>/bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<%=request.getContextPath() %>/bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href="<%=request.getContextPath() %>/bootstrap/index.jsp">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -63,8 +63,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <a class="collapse-item" href="/home/bootstrap/buttons.html">Buttons</a>
+            <a class="collapse-item" href="/home/bootstrap/cards.html">Cards</a>
           </div>
         </div>
       </li>
@@ -78,10 +78,10 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
+            <a class="collapse-item" href="/home/bootstrap/utilities-color.html">Colors</a>
+            <a class="collapse-item" href="/home/bootstrap/utilities-border.html">Borders</a>
+            <a class="collapse-item" href="/home/bootstrap/utilities-animation.html">Animations</a>
+            <a class="collapse-item" href="/home/bootstrap/utilities-other.html">Other</a>
           </div>
         </div>
       </li>
@@ -261,7 +261,7 @@
                   </div>
                   <div class="font-weight-bold">
                     <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-                    <div class="small text-gray-500">Emily Fowler Â· 58m</div>
+                    <div class="small text-gray-500">Emily Fowler ÃÂ· 58m</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -271,7 +271,7 @@
                   </div>
                   <div>
                     <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun Â· 1d</div>
+                    <div class="small text-gray-500">Jae Chun ÃÂ· 1d</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -281,7 +281,7 @@
                   </div>
                   <div>
                     <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez Â· 2d</div>
+                    <div class="small text-gray-500">Morgan Alvarez ÃÂ· 2d</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -291,7 +291,7 @@
                   </div>
                   <div>
                     <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog Â· 2w</div>
+                    <div class="small text-gray-500">Chicken the Dog ÃÂ· 2w</div>
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
@@ -300,7 +300,7 @@
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
-            <!-- Nav Item - User Information -->
+                        <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=session.getAttribute("username") %></span>
@@ -329,62 +329,7 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-          <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme. The charts below have been customized - for further customization options, please visit the <a target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js documentation</a>.</p>
-
-          <!-- Content Row -->
-          <div class="row">
-
-            <div class="col-xl-8 col-lg-7">
-
-              <!-- Area Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the area chart can be found in the <code>/js/demo/chart-area-demo.js</code> file.
-                </div>
-              </div>
-
-              <!-- Bar Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the bar chart can be found in the <code>/js/demo/chart-bar-demo.js</code> file.
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Donut Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the donut chart can be found in the <code>/js/demo/chart-pie-demo.js</code> file.
-                </div>
-              </div>
-            </div>
-          </div>
+          <h1 class="h3 mb-4 text-gray-800">用户信息更新成功，点此返回<a href="<%= request.getContextPath()%>/bootstrap/index.jsp">主页面</a></h1>
 
         </div>
         <!-- /.container-fluid -->
@@ -433,22 +378,14 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<%=request.getContextPath() %>/bootstrap/vendor/jquery/jquery.min.js"></script>
-  <script src="<%=request.getContextPath() %>/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<%=request.getContextPath() %>/vendor/jquery/jquery.min.js"></script>
+  <script src="<%=request.getContextPath() %>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="<%=request.getContextPath() %>/bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<%=request.getContextPath() %>vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="<%=request.getContextPath() %>/bootstrap/js/sb-admin-2.min.js"></script>
-
-  <!-- Page level plugins -->
-  <script src="<%=request.getContextPath() %>/bootstrap/vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="<%=request.getContextPath() %>/bootstrap/js/demo/chart-area-demo.js"></script>
-  <script src="<%=request.getContextPath() %>/bootstrap/js/demo/chart-pie-demo.js"></script>
-  <script src="<%=request.getContextPath() %>/bootstrap/js/demo/chart-bar-demo.js"></script>
+  <script src="<%=request.getContextPath() %>js/sb-admin-2.min.js"></script>
 
 </body>
 

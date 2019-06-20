@@ -7,8 +7,47 @@ public class LoginUser {
     private String username;
 
     private String password;
+    
+    private String phone;
+    
+    private String address;
+    
+    private String realName;
 
-    public LoginUser() {
+    public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public LoginUser(Integer id, String username, String password, String phone, String address) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.phone = phone;
+		this.address = address;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public LoginUser() {
 		super();
 	}
 
@@ -55,11 +94,8 @@ public class LoginUser {
     }
 
     @Override
-    public String toString() {
-        return "LoginUser{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+	public String toString() {
+		return "LoginUser [id=" + id + ", username=" + username + ", password=" + password + ", phone=" + phone
+				+ ", address=" + address + ", realName=" + realName + "]";
+	}
 }

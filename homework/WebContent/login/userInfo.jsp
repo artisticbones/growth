@@ -1,4 +1,6 @@
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page import="cn.swu.edu.javaweb.login.pojo.LoginUser" %>
+<html>
 
 <head>
 
@@ -6,16 +8,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="chengfeitian">
 
   <title>SB Admin 2 - Blank</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="<%=request.getContextPath() %>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="<%=request.getContextPath() %>/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -28,7 +30,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<%=request.getContextPath() %>/bootstrap/index.jsp">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -40,7 +42,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<%=request.getContextPath() %>/bootstrap/index.jsp">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -62,8 +64,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <a class="collapse-item" href="<%=request.getContextPath() %>/bootstrap/buttons.html">Buttons</a>
+            <a class="collapse-item" href="<%=request.getContextPath() %>/bootstrap/cards.html">Cards</a>
           </div>
         </div>
       </li>
@@ -93,38 +95,43 @@
         Addons
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
-        </a>
-        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item active" href="blank.html">Blank Page</a>
-          </div>
-        </div>
-      </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="<%=request.getContextPath() %>/bootstap/charts.jsp">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<%=request.getContextPath() %>/bootstrap/tables.jsp">
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
+      </li>
+      
+      <!-- Nav Item - shoppingCart -->
+      <li class="nav-item">
+      	<a class="nav-link" href="<%= request.getContextPath() %>/webpages/shoppingcart/step-1.jsp">
+      		<i class="fas fa-fw fa-table"></i>
+      		<span>Shopping Cart</span>
+      	</a>
+      </li>
+      
+      <!-- Nav Item - fileUpload -->
+      <li class="nav-item">
+      	<a class="nav-link" href="<%= request.getContextPath()%>/webpages/fileupload/upload.jsp">
+      		<i class="fas fa-fw fa-table"></i>
+      		<span>FileUpload</span>
+      	</a>
+      </li>
+      
+      <!-- Nav Item - Download or display pdf -->
+      <li class="nav-item">
+      	<a class="nav-link" href="<%= request.getContextPath()%>/pdf/web/viewer.html?file=http://localhost:8080/homework/download/linux-device-drivers.pdf">
+      		<i class="fas fa-fw fa-table"></i>
+      		<span>Document</span>
+      	</a>
       </li>
 
       <!-- Divider -->
@@ -255,7 +262,7 @@
                   </div>
                   <div class="font-weight-bold">
                     <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-                    <div class="small text-gray-500">Emily Fowler Â· 58m</div>
+                    <div class="small text-gray-500">Emily Fowler ÃÂ· 58m</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -265,7 +272,7 @@
                   </div>
                   <div>
                     <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun Â· 1d</div>
+                    <div class="small text-gray-500">Jae Chun ÃÂ· 1d</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -275,7 +282,7 @@
                   </div>
                   <div>
                     <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez Â· 2d</div>
+                    <div class="small text-gray-500">Morgan Alvarez ÃÂ· 2d</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -285,7 +292,7 @@
                   </div>
                   <div>
                     <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog Â· 2w</div>
+                    <div class="small text-gray-500">Chicken the Dog ÃÂ· 2w</div>
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
@@ -331,8 +338,66 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
-
+          <h1 class="h3 mb-4 text-gray-800">修改用户信息界面</h1>
+          <%= request.getAttribute("message") == null ? "" : request.getAttribute("message")%>
+          <%
+          	String id = null;
+          	String realName = null;
+          	String username = null;
+          	String oldName = null;
+          	String address = null;
+          	String phone = null;
+          	String password = null;
+          	
+          	LoginUser user = (LoginUser)request.getAttribute("user");
+          	if(user != null){
+          		id = user.getId() + "";
+          		oldName = user.getUsername();
+          		username = user.getUsername();
+          		realName = user.getRealName();
+          		address = user.getAddress();
+          		phone = user.getPhone();
+          		password = user.getPassword();
+          	}else{
+          		id = request.getParameter("id");
+          		oldName = request.getParameter("oldName");
+          		username = request.getParameter("oldName");
+          		
+          		address = request.getParameter("address");
+          		phone = request.getParameter("phone");
+          		password = request.getParameter("password");
+          	}
+          %>
+				<form action="<%=request.getContextPath() %>/update.action" method="post">
+					<div class="table-responsive">
+						<input type="hidden" name="id" value="<%= id %>">
+						<input type="hidden" name="oldName" value="<%= oldName %>">
+						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+							<tr>
+								<td>姓 名:</td>
+								<td><input class="form-control form-control-user" type="text" name="realname" value="${realName }" placeholder="请输入你的真实姓名"></td>
+							</tr>
+							<tr>
+								<td>用户名:</td>
+								<td><input type="text" class="form-control form-control-user" name="username" value="${username }" placeholder="请修改后的用户名"></td>
+							</tr>
+							<tr>
+								<td>密 码:</td>
+								<td><input type="password" class="form-control form-control-user" name="password" value="${password }" placeholder="请输入修改后的密码"></td>
+							</tr>
+							<tr>
+								<td>地 址:</td>
+								<td><input class="form-control form-control-user" type="text" name="address" value="${address }" placeholder="请输入你的地址"></td>
+							</tr>
+							<tr>
+								<td>电 话:</td>
+								<td><input class="form-control form-control-user" type="text" name="phone" value="${phone }" placeholder="请输入你的电话"></td>
+							</tr>
+								
+						</table>
+						<input class="btn btn-primary btn-user btn-block" type="submit" value="submit"/>
+					</div>
+				</form>
         </div>
         <!-- /.container-fluid -->
 
@@ -343,7 +408,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; ChengFeitian's Website 2019</span>
           </div>
         </div>
       </footer>
@@ -360,7 +425,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
+<!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -373,21 +438,29 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="<%= request.getContextPath()%>/logout.action">Logout</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<%=request.getContextPath() %>/vendor/jquery/jquery.min.js"></script>
+  <script src="<%=request.getContextPath() %>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<%=request.getContextPath() %>/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="<%=request.getContextPath() %>/js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="<%=request.getContextPath() %>/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="<%=request.getContextPath() %>/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="<%=request.getContextPath() %>/js/demo/datatables-demo.js"></script>
+	
 
 </body>
 

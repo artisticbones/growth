@@ -34,13 +34,13 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form class="user" action="<%=request.getContextPath() %>/register.action" method="post">
+              <form class="user" action="<%=request.getContextPath()%>/register.action" method="post">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="姓">
+                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="姓" name="firstName">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="名">
+                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="名" name="lastName">
                   </div>
                 </div>
                 <div class="form-group">
@@ -54,7 +54,8 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="请再次输入密码" name="repeatPassword">
                   </div>
                 </div>
-                <button class="btn btn-primary btn-user btn-block" type="submit">注册</button>
+                <input class="btn btn-primary btn-user btn-block" type="submit" value="注册">
+                <!-- <button class="btn btn-primary btn-user btn-block" type="submit">注册</button> -->
                 <!-- <a href="login.html" class="btn btn-primary btn-user btn-block">
                   Register Account
                 </a> -->

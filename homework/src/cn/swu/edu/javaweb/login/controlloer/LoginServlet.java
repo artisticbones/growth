@@ -59,7 +59,9 @@ public class LoginServlet extends HttpServlet {
 	            //3.匹配则重定向到主页
 				HttpSession session = request.getSession();
                 session.setAttribute("username", username);
+                
 	            response.sendRedirect(request.getContextPath() + "/bootstrap/index.jsp");
+	            return;
 	        }else {
 	            //4.否则重定向到登录页面
 	        	request.getSession().setAttribute("message", "验证码不一致！");
@@ -69,6 +71,7 @@ public class LoginServlet extends HttpServlet {
 		}else {
 			request.getSession().setAttribute("message", "用户名或密码不正确！");
 			response.sendRedirect(request.getContextPath() + "/login.jsp");
+			return;
 		}
 		//System.out.println(loginUser);
 //		if(paramCode != null && paramCode.equals(sessionCode)) {
@@ -83,6 +86,8 @@ public class LoginServlet extends HttpServlet {
     private void register(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
         //1.获取用户名和密码
         String username = request.getParameter("username");
+        String realName = request.getParameter("firstName") + request.getParameter("lastName");
+        System.out.println(realName);
         String password = request.getParameter("password");
         String repeatPassword = request.getParameter("repeatPassword");
         System.out.println(username);
@@ -93,19 +98,70 @@ public class LoginServlet extends HttpServlet {
         if (username != null && password != null){
         	if(password.equals(repeatPassword)) {
 	            System.out.println("2");
+	            loginUser.setRealName(realName);
 	            loginUser.setUsername(username);
 	            loginUser.setPassword(password);
 	            System.out.println("3");
 	            loginUserDAO.save(loginUser);
 	            System.out.println("4");
 	            response.sendRedirect("index.jsp");
+	            return;
             }else {
-            	request.getSession().setAttribute("message", "两次密码不一致");
+            	HttpSession session = request.getSession();
+            	session.setAttribute("message", "两次密码不一致");
             	response.sendRedirect(request.getContextPath() + "/register.jsp");
+            	return;
             }
         }else {
             request.setAttribute("message","用户名或密码不合规范！");
             request.getRequestDispatcher(request.getContextPath() + "/register.jsp").forward(request,response);
+            return;
         }
+    }
+    
+    private void logout(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
+    	
+    	HttpSession session = request.getSession();
+    	//String name = (String) session.getAttribute("username");
+		session.removeAttribute("username");
+    	response.sendRedirect(request.getContextPath() + "/login.jsp");
+    	
+    }
+    
+    private void update(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
+    	//1.获取表单参数: id,name,address,phone,oldName
+    			String id = request.getParameter("id");
+    			System.out.println(id);
+    			String name = request.getParameter("username");
+    			String realName = request.getParameter("realname");
+    			String password = request.getParameter("password");
+    			String address = request.getParameter("address");
+    			String phone = request.getParameter("phone");
+    			String oldName = request.getParameter("oldName");
+    			//2.检验name是否被占用:
+    			//2.1比较name和oldname是否相同，相同说明namekeyong
+    			if(!(oldName.equalsIgnoreCase(name))) {
+    				long count = loginUserDAO.getCountWithName(name);
+    				//若返回值大于0，则响应updatecustomer.jsp页面,使用转发方式
+    				System.out.println(count);
+    				if(count > 0) {
+    					//在该页面显示提示错误消息
+    					String message = "user " + name + "already exists!";
+    					request.setAttribute("message", message);
+    					request.getRequestDispatcher(request.getContextPath() + "/login/userInfo.jsp").forward(request, response);
+    					return;
+    				}
+    			}
+    			LoginUser user = new LoginUser();
+    			user.setId(Integer.parseInt(id));
+    			user.setUsername(name);
+    			user.setRealName(realName);
+    			user.setPassword(password);
+    			user.setAddress(address);
+    			user.setPhone(phone);
+    				
+    			loginUserDAO.update(user);
+    			System.out.println("user-->" + user);
+    			response.sendRedirect(request.getContextPath() + "/login/success.jsp");
     }
 }

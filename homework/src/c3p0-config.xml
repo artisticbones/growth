@@ -8,7 +8,7 @@
   	<property name="user">root</property>
   	<property name="password">happy1314!</property>
   	<property name="driverClass">com.mysql.cj.jdbc.Driver</property>
-  	<property name="jdbcUrl">jdbc:mysql://localhost:3306/test</property>
+  	<property name="jdbcUrl">jdbc:mysql://localhost:3306/db_homework</property>
   	
   	
     <property name="acquireIncrement">5</property>

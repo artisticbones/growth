@@ -13,19 +13,19 @@ import cn.swu.edu.javaweb.login.pojo.LoginUser;
 public class LoginUserDAOJdbcImpl extends DAO<LoginUser> implements LoginUserDAO {
     @Override
     public void save(LoginUser loginUser) {
-        String sql = "insert into test_users(name,password) values(?,?)";
-        update(sql,loginUser.getUsername(),loginUser.getPassword());
+        String sql = "insert into login(name,password,realname) values(?,?,?)";
+        update(sql,loginUser.getUsername(),loginUser.getPassword(),loginUser.getRealName());
     }
 
     @Override
     public LoginUser get(Integer id) {
-        String sql = "select * from test_users where id = ?";
+        String sql = "select * from login where id = ?";
         return get(sql,id);
     }
 
     @Override
     public void update(LoginUser loginUser) {
-        String sql = "update test_users set name = ?,password = ? where id = ?";
+        String sql = "update login set name = ?,password = ? where id = ?";
         update(sql,loginUser.getUsername(),loginUser.getPassword(),loginUser.getId());
     }
 
@@ -39,7 +39,7 @@ public class LoginUserDAOJdbcImpl extends DAO<LoginUser> implements LoginUserDAO
 
         try {
             connection = JdbcUtils.getConnection();
-            String sql = "select * from test_users where name = ? and password = ?";
+            String sql = "select * from login where name = ? and password = ?";
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,username);
             System.out.println("preparedStatement字段值" + username);
@@ -64,4 +64,11 @@ public class LoginUserDAOJdbcImpl extends DAO<LoginUser> implements LoginUserDAO
         System.out.println(loginUser);
         return loginUser;
     }
+
+	@Override
+	public long getCountWithName(String name) {
+		// TODO Auto-generated method stub
+		String sql = "select count(id) from login where name = ?";
+		return getForValue(sql, name);
+	}
 }
