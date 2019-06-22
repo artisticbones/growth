@@ -304,25 +304,22 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                <% 
+                	LoginUser loginUser = (LoginUser)session.getAttribute("user"); 
+                	out.print(loginUser.getUsername());
+                %>
+                </span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="<%=request.getContextPath() %>/login/userInfo.jsp">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="<%=request.getContextPath() %>/logout.action" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -349,7 +346,7 @@
           	String phone = null;
           	String password = null;
           	
-          	LoginUser user = (LoginUser)request.getAttribute("user");
+          	LoginUser user = (LoginUser)session.getAttribute("user");
           	if(user != null){
           		id = user.getId() + "";
           		oldName = user.getUsername();
@@ -375,23 +372,23 @@
 						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 							<tr>
 								<td>姓 名:</td>
-								<td><input class="form-control form-control-user" type="text" name="realname" value="${realName }" placeholder="请输入你的真实姓名"></td>
+								<td><input class="form-control form-control-user" type="text" name="realname" value="<%=realName == null ? "" : realName %>" placeholder="请输入你的真实姓名"></td>
 							</tr>
 							<tr>
 								<td>用户名:</td>
-								<td><input type="text" class="form-control form-control-user" name="username" value="${username }" placeholder="请修改后的用户名"></td>
+								<td><input type="text" class="form-control form-control-user" name="username" value="<%=username == null ? "" : username %>" placeholder="请修改后的用户名"></td>
 							</tr>
 							<tr>
 								<td>密 码:</td>
-								<td><input type="password" class="form-control form-control-user" name="password" value="${password }" placeholder="请输入修改后的密码"></td>
+								<td><input type="password" class="form-control form-control-user" name="password" value="<%=password == null ? "" :password %>" placeholder="请输入修改后的密码"></td>
 							</tr>
 							<tr>
 								<td>地 址:</td>
-								<td><input class="form-control form-control-user" type="text" name="address" value="${address }" placeholder="请输入你的地址"></td>
+								<td><input class="form-control form-control-user" type="text" name="address" value="<%=address  == null ? "" : address %>" placeholder="请输入你的地址"></td>
 							</tr>
 							<tr>
 								<td>电 话:</td>
-								<td><input class="form-control form-control-user" type="text" name="phone" value="${phone }" placeholder="请输入你的电话"></td>
+								<td><input class="form-control form-control-user" type="text" name="phone" value="<%=phone == null ? "" : phone %>" placeholder="请输入你的电话"></td>
 							</tr>
 								
 						</table>

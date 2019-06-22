@@ -8,6 +8,9 @@
     <error-code>500</error-code>
     <location>/blank.html</location>
   </error-page>
+  <session-config>
+      <session-timeout>60</session-timeout>
+  </session-config>
   <welcome-file-list>
     <welcome-file>/login.jsp</welcome-file>
   </welcome-file-list>
@@ -81,4 +84,18 @@
     <filter-name>CommonFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <servlet>
+    <servlet-name>PersonServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.manager.controller.PersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PersonServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>cn.swu.edu.javaweb.manager.controller.InitServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
 </web-app>

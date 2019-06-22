@@ -1,8 +1,8 @@
 package cn.swu.edu.javaweb.login.controlloer;
 
-import cn.swu.edu.javaweb.login.dao.LoginUserDAO;
-import cn.swu.edu.javaweb.login.pojo.LoginUser;
-import cn.swu.edu.javaweb.login.service.LoginUserDAOJdbcImpl;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,9 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import com.mysql.cj.Session;
+
+import cn.swu.edu.javaweb.login.dao.LoginUserDAO;
+import cn.swu.edu.javaweb.login.pojo.LoginUser;
+import cn.swu.edu.javaweb.login.service.LoginUserDAOJdbcImpl;
 
 public class LoginServlet extends HttpServlet {
 
@@ -58,18 +60,18 @@ public class LoginServlet extends HttpServlet {
 			if (paramCode != null && paramCode.equals(sessionCode)){
 	            //3.匹配则重定向到主页
 				HttpSession session = request.getSession();
-                session.setAttribute("username", username);
+                session.setAttribute("user", loginUser);
                 
 	            response.sendRedirect(request.getContextPath() + "/bootstrap/index.jsp");
 	            return;
 	        }else {
 	            //4.否则重定向到登录页面
-	        	request.getSession().setAttribute("message", "验证码不一致！");
+	        	request.getSession().setAttribute("loginMessage", "验证码不一致！");
 				response.sendRedirect(request.getContextPath() + "/login.jsp");
 				return;
 	        }
 		}else {
-			request.getSession().setAttribute("message", "用户名或密码不正确！");
+			request.getSession().setAttribute("loginMessage", "用户名或密码不正确！");
 			response.sendRedirect(request.getContextPath() + "/login.jsp");
 			return;
 		}
@@ -96,24 +98,31 @@ public class LoginServlet extends HttpServlet {
         //不检查是否为空（在前端监测比在后端检查要方便）
         //2.调用save方法将信息存入数据库
         if (username != null && password != null){
-        	if(password.equals(repeatPassword)) {
-	            System.out.println("2");
-	            loginUser.setRealName(realName);
-	            loginUser.setUsername(username);
-	            loginUser.setPassword(password);
-	            System.out.println("3");
-	            loginUserDAO.save(loginUser);
-	            System.out.println("4");
-	            response.sendRedirect("index.jsp");
-	            return;
-            }else {
-            	HttpSession session = request.getSession();
-            	session.setAttribute("message", "两次密码不一致");
-            	response.sendRedirect(request.getContextPath() + "/register.jsp");
-            	return;
-            }
+        	if(!(loginUserDAO.getCountWithName(username) > 0)) {
+	        	if(password.equals(repeatPassword)) {
+		            System.out.println("2");
+		            loginUser.setRealName(realName);
+		            loginUser.setUsername(username);
+		            loginUser.setPassword(password);
+		            System.out.println("3");
+		            loginUserDAO.save(loginUser);
+		            System.out.println("4");
+		            response.sendRedirect(request.getContextPath() + "/login.jsp");
+		            return;
+	            }else {
+	            	HttpSession session = request.getSession();
+	            	session.setAttribute("registerMessage", "两次密码不一致");
+	            	response.sendRedirect(request.getContextPath() + "/register.jsp");
+	            	return;
+	            }
+        	}else {
+				String message = "user " + username + " already exits,please choose another one!";
+				request.setAttribute("registerMessage", message);
+				request.getRequestDispatcher(request.getContextPath() + "/register.jsp").forward(request, response);
+				return;
+			}
         }else {
-            request.setAttribute("message","用户名或密码不合规范！");
+            request.setAttribute("registerMessage","用户名或密码不合规范！");
             request.getRequestDispatcher(request.getContextPath() + "/register.jsp").forward(request,response);
             return;
         }
@@ -123,7 +132,7 @@ public class LoginServlet extends HttpServlet {
     	
     	HttpSession session = request.getSession();
     	//String name = (String) session.getAttribute("username");
-		session.removeAttribute("username");
+		session.removeAttribute("user");
     	response.sendRedirect(request.getContextPath() + "/login.jsp");
     	
     }
@@ -131,7 +140,7 @@ public class LoginServlet extends HttpServlet {
     private void update(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
     	//1.获取表单参数: id,name,address,phone,oldName
     			String id = request.getParameter("id");
-    			System.out.println(id);
+    			System.out.println("id-->" + id);
     			String name = request.getParameter("username");
     			String realName = request.getParameter("realname");
     			String password = request.getParameter("password");
@@ -143,7 +152,7 @@ public class LoginServlet extends HttpServlet {
     			if(!(oldName.equalsIgnoreCase(name))) {
     				long count = loginUserDAO.getCountWithName(name);
     				//若返回值大于0，则响应updatecustomer.jsp页面,使用转发方式
-    				System.out.println(count);
+    				System.out.println("count-->" + count);
     				if(count > 0) {
     					//在该页面显示提示错误消息
     					String message = "user " + name + "already exists!";
@@ -161,6 +170,7 @@ public class LoginServlet extends HttpServlet {
     			user.setPhone(phone);
     				
     			loginUserDAO.update(user);
+    			request.getSession().setAttribute("user", user);
     			System.out.println("user-->" + user);
     			response.sendRedirect(request.getContextPath() + "/login/success.jsp");
     }

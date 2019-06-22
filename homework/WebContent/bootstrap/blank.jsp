@@ -86,6 +86,20 @@
         </div>
       </li>
 
+	  <!-- Nav Item - People -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Person Statics</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">人员信息:</h6>
+            <a class="collapse-item" href="/homework/query.do">查询信息</a>
+            <a class="collapse-item" href="/homework/person/newcustomer.jsp">添加信息</a>
+          </div>
+        </div>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -93,7 +107,7 @@
       <div class="sidebar-heading">
         Addons
       </div>
-
+	
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">

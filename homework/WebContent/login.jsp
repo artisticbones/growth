@@ -42,7 +42,7 @@
                   </div>
                   <div class="text-center">
                     <font color="red">
-                  		<%= session.getAttribute("message") == null ? "" : session.getAttribute("message") %>
+                  		<%= session.getAttribute("loginMessage") == null ? "" : session.getAttribute("loginMessage") %>
                   	</font>
                   </div>
                   

@@ -19,6 +19,9 @@ public class CommonFilter extends HttpFilter {
 			throws IOException, ServletException {
 		
 		response.setCharacterEncoding("utf-8");
+		response.setDateHeader("Expires", -1);				//告诉浏览器数据能够缓存多长时间，-1或0表示不缓存
+        response.setHeader("Cache_Control", "no-cache");	//支持HTTP 1.1，告诉浏览器要不要缓存数据，如“no-cache”
+        response.setHeader("Pragma", "no-cache");			//支持HTTP 1.0。告诉浏览器要不要缓存数据，如“no-cache”
         //response.setContentType("text/html;charset=utf-8");
 		//设置响应报头允许当前应用被跨域请求（CROS）
 		response.setHeader("Access-Control-Allow-Origin", "*");
@@ -46,7 +49,7 @@ public class CommonFilter extends HttpFilter {
         }
         if (check) {
             // 判断session中此值是否存在
-            if (session.getAttribute("username") != null) {
+            if (session.getAttribute("user") != null) {
                 //System.out.println("---->通过】");
                 chain.doFilter(request, response); //放行
             } else {

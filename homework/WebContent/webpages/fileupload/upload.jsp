@@ -1,3 +1,4 @@
+<%@page import="cn.swu.edu.javaweb.login.pojo.LoginUser"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <html>
 
@@ -85,7 +86,22 @@
           </div>
         </div>
       </li>
-
+	  
+	  <!-- Nav Item - People -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Person Statics</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">人员信息:</h6>
+            <a class="collapse-item" href="/homework/query.do">查询信息</a>
+            <a class="collapse-item" href="/homework/person/newcustomer.jsp">添加信息</a>
+          </div>
+        </div>
+      </li>
+	  
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -303,7 +319,12 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=session.getAttribute("username") %></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                <% 
+                	LoginUser loginUser = (LoginUser)session.getAttribute("user"); 
+                	out.print(loginUser.getUsername());
+                %>
+                </span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -334,24 +355,24 @@
 				<br><br>
 
 	
-				<form action="<%=request.getContextPath() %>/fileUploadServlet" method="post" enctype="multipart/form-data">
-					
-					<table>
-						<tr class="file">
-							<td>File1:</td>
-							<td><input type="file" name="file1"/></td>
-						</tr>
-						<tr class="desc">
-							<td>Desc1:</td>
-							<td><input type="text" name="desc1"/></td>
-						</tr>
-						
-						<tr>
-							<td><input type="submit" id="submit" value="提交"/></td>
-							<td><button id="addFile">新增一个附件</button></td>
-						</tr>
-					</table>
-					
+				<form class="user" action="<%=request.getContextPath() %>/fileUploadServlet" method="post" enctype="multipart/form-data">
+					<div class="table-responsive">
+						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+							<tr class="file">
+								<td>File1:</td>
+								<td><input type="file" name="file1"/></td>
+							</tr>
+							<tr class="desc">
+								<td>Desc1:</td>
+								<td><input type="text" name="desc1"/></td>
+							</tr>
+							
+							<tr>
+								<td><input type="submit" id="submit" value="提交"/></td>
+								<td><button id="addFile">新增一个附件</button></td>
+							</tr>
+						</table>
+					</div>
 				</form>
         </div>
         <!-- /.container-fluid -->
