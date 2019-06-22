@@ -35,7 +35,7 @@ public class CommonFilter extends HttpFilter {
 		// 因为是全局过滤，所以会对所有请求进行过滤，诸如css、js、png等等
         // 所以应该做到只拦截.html和.jsp请求，对请求地址的末尾进行判断
         // 修订 servlet加入拦截过滤范围
-        if (url.endsWith(".jsp") || url.endsWith(".html") || url.endsWith("Servlet") || url.endsWith(".action")) {
+        if (url.endsWith(".jsp") || url.endsWith(".html") || url.endsWith("Servlet") || url.endsWith(".action" ) || url.endsWith(".do")) {
             check = true;
         }
         
