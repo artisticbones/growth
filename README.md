@@ -22,6 +22,10 @@ title: "My JavaWeb Growth"
 
 --- University: Southwest University
 
+--- __*[Homework](http://120.79.133.21:8080/homework/)*__
+
+* username:root password:network; 也可使用注册功能注册账号后登入！
+
 --- __*[Aliyun](http://120.79.133.21:8080/LoginServlet/login.html)*__
 
 --- __*[MVCAPP](http://120.79.133.21:8080/MVCTutorial/index.jsp)*__
