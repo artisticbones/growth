@@ -34,8 +34,8 @@ import cn.swu.edu.javaweb.fileupload.utils.FileUtils;
 
 public class FileUploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String TEMP_DIR = "/tmp";
-	private static final String FILE_PATH = "/WEB-INF/files/";
+	private static final String TEMP_DIR = "/tmp/";
+	private static final String FILE_PATH = "/WEB-INF/files";
 
 	private UploadFileDao dao = new UploadFileDao();
 	/**
@@ -71,7 +71,7 @@ public class FileUploadServlet extends HttpServlet {
 			saveBeans(beans);
 			
 //			//6. 删除临时文件夹的临时文件
-//			FileUtils.delAllFile(TEMP_DIR);
+			FileUtils.delAllFile(TEMP_DIR);
 			
 			path = "/webpages/fileupload/success.jsp";
 			
@@ -216,7 +216,7 @@ public class FileUploadServlet extends HttpServlet {
 		String extName = fileName.substring(fileName.lastIndexOf("."));
 		Random random = new Random();
 		
-		String filePath = getServletContext().getRealPath(FILE_PATH) + System.currentTimeMillis() + random.nextInt(100000) + extName;
+		String filePath = getServletContext().getRealPath(FILE_PATH) + "/" + System.currentTimeMillis() + random.nextInt(100000) + extName;
 		return filePath;
 	}
 

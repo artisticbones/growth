@@ -366,7 +366,7 @@
 							</tr>
 							<tr>
 								<td>工作地点:</td>
-								<td><input type="password" class="form-control form-control-user" name="office" value="<%= request.getParameter("office") == null ? "" : request.getParameter("phone")%>" placeholder="请输入修改后的工作地点"></td>
+								<td><input type="text" class="form-control form-control-user" name="office" value="<%= request.getParameter("office") == null ? "" : request.getParameter("phone")%>" placeholder="请输入修改后的工作地点"></td>
 							</tr>
 							<tr>
 								<td>年 龄:</td>
