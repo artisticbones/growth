@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" metadata-complete="true" version="4.0">
+  <display-name>Tomcat Documentation</display-name>
+  <description>
+		Tomcat Documentation.
+	</description>
+  <servlet>
+    <servlet-name>listAllStudent</servlet-name>
+    <servlet-class>cn.swu.edu.ListAllStudents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>listAllStudent</servlet-name>
+    <url-pattern>/listAllStudents</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteStudentServlet</servlet-name>
+    <servlet-class>cn.swu.edu.DeleteStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteStudentServlet</servlet-name>
+    <url-pattern>/deleteStudent</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddStudentServlet</servlet-name>
+    <servlet-class>cn.swu.edu.AddRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddStudentServlet</servlet-name>
+    <url-pattern>/addRecord</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CustomerServlet</servlet-name>
+    <servlet-class>cn.swu.edu.servlet.CustomerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerServlet</servlet-name>
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>cn.swu.edu.servlet.InitServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+</web-app>

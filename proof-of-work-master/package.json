@@ -1,0 +1,49 @@
+{
+  "name": "proof-of-work",
+  "version": "3.3.2",
+  "description": "SHA256 + Bloom filter proof of work",
+  "main": "lib/pow.js",
+  "types": "lib/pow.d.ts",
+  "bin": {
+    "proof-of-work": "bin/proof-of-work"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "scripts": {
+    "test": "npm run test-node && npm run test-browser && npm run lint",
+    "test-node": "mocha --reporter=spec test/*-test.js",
+    "test-browser": "TEST_ENV=browser mocha --reporter=spec test/*-test.js",
+    "lint": "eslint lib/*.js lib/**/*.js lib/**/**/*.js test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/indutny/proof-of-work.git"
+  },
+  "keywords": [
+    "proof",
+    "of",
+    "work",
+    "sha256",
+    "bloom"
+  ],
+  "author": "Fedor Indutny <fedor@indutny.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indutny/proof-of-work/issues"
+  },
+  "homepage": "https://github.com/indutny/proof-of-work#readme",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "hash.js": "^1.1.5",
+    "minimalistic-assert": "^1.0.1"
+  },
+  "browser": {
+    "./lib/pow/utils/index.js": "./lib/pow/utils/browser.js"
+  }
+}

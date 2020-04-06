@@ -1,0 +1,19 @@
+spring:
+  resources:
+    static-locations: classpath:/
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .html
+    content-type: text/html
+    charset: UTF-8
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_sample
+    username: root
+    password: happy1314!
+    driver-class-name: com.mysql.jdbc.Driver
+    type: org.springframework.jdbc.datasource.DelegatingDataSource
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: true
