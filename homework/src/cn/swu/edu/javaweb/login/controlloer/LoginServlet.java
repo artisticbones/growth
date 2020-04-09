@@ -1,20 +1,17 @@
 package cn.swu.edu.javaweb.login.controlloer;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import cn.swu.edu.javaweb.login.dao.LoginUserDAO;
+import cn.swu.edu.javaweb.login.pojo.LoginUser;
+import cn.swu.edu.javaweb.login.service.LoginUserDAOJdbcImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import com.mysql.cj.Session;
-
-import cn.swu.edu.javaweb.login.dao.LoginUserDAO;
-import cn.swu.edu.javaweb.login.pojo.LoginUser;
-import cn.swu.edu.javaweb.login.service.LoginUserDAOJdbcImpl;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class LoginServlet extends HttpServlet {
 
@@ -36,8 +33,8 @@ public class LoginServlet extends HttpServlet {
         try {
             Method method = getClass().getDeclaredMethod(methodName,HttpServletRequest.class,HttpServletResponse.class);
             //3.利用反射获取具体的方法
-            method.invoke(this,request,response);
-        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+			Object invoke = method.invoke(this, request, response);
+		} catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
             response.sendRedirect("/404.html");
         }
     }
