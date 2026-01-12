@@ -36,7 +36,7 @@
   "homepage": "https://github.com/indutny/proof-of-work#readme",
   "devDependencies": {
     "benchmark": "^2.1.4",
-    "eslint": "^4.19.1",
+    "eslint": "^9.32.0",
     "mocha": "^5.2.0"
   },
   "dependencies": {
